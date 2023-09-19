@@ -1,4 +1,6 @@
 <!-- Portfolio Header -->
+<h2 align="center">Portfolio</h1>
+
 <p align="center">Welcome to my portfolio! This project showcases my skills and projects using the latest web development technologies. Built with <strong>Next.js, TypeScript</strong> and <strong>Tailwind CSS</strong>, it offers a clean and modern user experience.</p>
 
 <!-- Features Section -->
