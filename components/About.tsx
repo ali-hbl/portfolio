@@ -21,7 +21,7 @@ export default function About() {
         <span className="font-medium">energy and dedication, always striving to improve and succeed.</span>
         <br />
         <br />I <span className="underline">love</span> the feeling of finally figuring out a solution to a problem. My
-        core stack is <span className="font-medium">React, Next.js, Node.js, and MongoDB</span>. I am also familiar with
+        core stack is <span className="font-medium">React, Next.js, Node.js and MongoDB</span>. I am also familiar with
         TypeScript and Prisma. I am always looking to learn new technologies.
       </p>
       <p>
