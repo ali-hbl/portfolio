@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 export default function Divider() {
   return (
     <motion.div
-      className="hidden w-1 h-16 my-24 bg-gray-300 rounded-full sm:block"
+      className="my-24 hidden h-16 w-1 rounded-full bg-gray-300 sm:block"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.125 }}

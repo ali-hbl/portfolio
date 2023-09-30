@@ -14,7 +14,7 @@ export default function Intro() {
   const { ref } = useSectionInView('Home', 0.6);
 
   return (
-    <section id="home" ref={ref} className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
+    <section id="home" ref={ref} className="mb-28 max-w-[50rem] scroll-mt-[100rem] text-center sm:mb-0">
       <div className="flex items-center justify-center">
         <div className="relative">
           <motion.div
@@ -63,21 +63,21 @@ export default function Intro() {
       >
         <Link
           href="#contact"
-          className="flex items-center gap-2 py-3 text-white transition bg-gray-900 rounded-full outline-none group px-7 focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105"
+          className="group flex items-center gap-2 rounded-full bg-gray-900 px-7 py-3 text-white outline-none transition hover:scale-110 hover:bg-gray-950 focus:scale-110 active:scale-105"
         >
-          Contact me here <BsArrowRight className="transition opacity-70 group-hover:translate-x-1" />
+          Contact me here <BsArrowRight className="opacity-70 transition group-hover:translate-x-1" />
         </Link>
 
         <a
-          className="flex items-center gap-2 py-3 transition bg-white border rounded-full outline-none cursor-pointer group px-7 focus:scale-110 hover:scale-110 active:scale-105 border-black/10"
+          className="group flex cursor-pointer items-center gap-2 rounded-full border border-black/10 bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105"
           href="/CV.pdf"
           download
         >
-          Download CV <HiDownload className="transition opacity-60 group-hover:translate-y-1" />
+          Download CV <HiDownload className="opacity-60 transition group-hover:translate-y-1" />
         </a>
 
         <a
-          className="flex items-center gap-2 bg-white p-4 py-3 text-gray-700 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border border-black/10"
+          className="flex cursor-pointer items-center gap-2 rounded-full border border-black/10 bg-white p-4 py-3 text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105"
           href="https://www.linkedin.com/in/ali-haboula"
           target="_blank"
         >
@@ -85,7 +85,7 @@ export default function Intro() {
         </a>
 
         <a
-          className="flex items-center gap-2 text-[1.35rem] bg-white p-4 py-3 text-gray-700 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border border-black/10"
+          className="flex cursor-pointer items-center gap-2 rounded-full border border-black/10 bg-white p-4 py-3 text-[1.35rem] text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105"
           href="https://github.com/ali-hbl"
           target="_blank"
         >
