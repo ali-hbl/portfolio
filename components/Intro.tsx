@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import pp from '@/public/pp.jpeg';
 import Link from 'next/link';
+import { useActiveSectionContext } from '@/context/ActiveSectionContext';
 import { motion } from 'framer-motion';
 import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
 import { HiDownload } from 'react-icons/hi';
@@ -11,6 +12,7 @@ import { FaGithubSquare } from 'react-icons/fa';
 import { useSectionInView } from '@/hooks/useSectionInView';
 
 export default function Intro() {
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   const { ref } = useSectionInView('Home', 0.6);
 
   return (
@@ -64,12 +66,16 @@ export default function Intro() {
         <Link
           href="#contact"
           className="group flex items-center gap-2 rounded-full bg-gray-900 px-7 py-3 text-white outline-none transition hover:scale-110 hover:bg-gray-950 focus:scale-110 active:scale-105"
+          onClick={() => {
+            setActiveSection('Contact');
+            setTimeOfLastClick(Date.now());
+          }}
         >
           Contact me here <BsArrowRight className="opacity-70 transition group-hover:translate-x-1" />
         </Link>
 
         <a
-          className="group flex cursor-pointer items-center gap-2 rounded-full border border-black/10 bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105"
+          className="group flex cursor-pointer items-center gap-2 rounded-full border-black bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105"
           href="/CV.pdf"
           download
         >
@@ -77,7 +83,7 @@ export default function Intro() {
         </a>
 
         <a
-          className="flex cursor-pointer items-center gap-2 rounded-full border border-black/10 bg-white p-4 py-3 text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105"
+          className="flex cursor-pointer items-center gap-2 rounded-full border-black bg-white p-4 py-3 text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105"
           href="https://www.linkedin.com/in/ali-haboula"
           target="_blank"
         >
@@ -85,7 +91,7 @@ export default function Intro() {
         </a>
 
         <a
-          className="flex cursor-pointer items-center gap-2 rounded-full border border-black/10 bg-white p-4 py-3 text-[1.35rem] text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105"
+          className="flex cursor-pointer items-center gap-2 rounded-full border-black bg-white p-4 py-3 text-[1.35rem] text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105"
           href="https://github.com/ali-hbl"
           target="_blank"
         >
