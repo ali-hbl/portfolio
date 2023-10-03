@@ -4,7 +4,9 @@ import React from 'react';
 import SectionHeading from './SectionHeading';
 import { motion } from 'framer-motion';
 import { useSectionInView } from '@/hooks/useSectionInView';
-import { FaPaperPlane } from 'react-icons/fa';
+import { sendEmail } from '@/actions/sendEmail';
+import SubmitBtn from './SubmitBtn';
+import toast from 'react-hot-toast';
 
 export default function Contact() {
   const { ref } = useSectionInView('Contact');
@@ -37,16 +39,35 @@ export default function Contact() {
         or through this form.
       </p>
 
-      <form className="mt-10 flex flex-col">
-        <input className="h-14 rounded-lg border border-black px-4" type="email" placeholder="Your email" />
-        <textarea className="my-3 h-52 rounded-lg border-black p-4" placeholder="Your message" />
-        <button
-          className="group flex h-[3rem] w-[8rem] items-center justify-center gap-2 rounded-full bg-gray-900 text-white outline-none transition-all hover:scale-110 hover:bg-gray-950 focus:scale-110 active:scale-105"
-          type="submit"
-        >
-          Submit
-          <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:-translate-y-1 group-hover:translate-x-1" />
-        </button>
+      <form
+        className="mt-10 flex flex-col"
+        action={async (formData) => {
+          const { data, error } = await sendEmail(formData);
+
+          if (error) {
+            toast.error(error);
+            return;
+          }
+
+          toast.success('Email sent successfully!');
+        }}
+      >
+        <input
+          className="h-14 rounded-lg border border-black px-4"
+          type="email"
+          name="email"
+          placeholder="Your email"
+          maxLength={200}
+          required
+        />
+        <textarea
+          className="my-3 h-52 rounded-lg border-black p-4"
+          name="message"
+          placeholder="Your message"
+          maxLength={5000}
+          required
+        />
+        <SubmitBtn />
       </form>
     </motion.section>
   );
