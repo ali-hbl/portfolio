@@ -75,7 +75,7 @@ export default function Intro() {
         </Link>
 
         <a
-          className="group flex cursor-pointer items-center gap-2 rounded-full border-black bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105"
+          className="group flex cursor-pointer items-center gap-2 rounded-full border-black bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-white/10"
           href="/CV.pdf"
           download
         >
@@ -83,7 +83,7 @@ export default function Intro() {
         </a>
 
         <a
-          className="flex cursor-pointer items-center gap-2 rounded-full border-black bg-white p-4 py-3 text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105"
+          className="flex cursor-pointer items-center gap-2 rounded-full border-black bg-white p-4 py-3 text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/70"
           href="https://www.linkedin.com/in/ali-haboula"
           target="_blank"
         >
@@ -91,7 +91,7 @@ export default function Intro() {
         </a>
 
         <a
-          className="flex cursor-pointer items-center gap-2 rounded-full border-black bg-white p-4 py-3 text-[1.35rem] text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105"
+          className="flex cursor-pointer items-center gap-2 rounded-full border-black bg-white p-4 py-3 text-[1.35rem] text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/70"
           href="https://github.com/ali-hbl"
           target="_blank"
         >
