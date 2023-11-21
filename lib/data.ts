@@ -1,10 +1,11 @@
 import React from 'react';
 import { CgWorkAlt } from 'react-icons/cg';
 import { FaReact } from 'react-icons/fa';
+import { SiAngular } from 'react-icons/si';
 import { LuGraduationCap } from 'react-icons/lu';
-import corpcommentImg from '@/public/corpcomment.png';
-import rmtdevImg from '@/public/rmtdev.png';
-import wordanalyticsImg from '@/public/wordanalytics.png';
+import zaytoonImg from '@/public/zaytoon.png';
+import marvelImg from '@/public/marvel.png';
+import carhubImg from '@/public/carhub.png';
 
 export const links = [
   {
@@ -35,51 +36,64 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: 'Graduated bootcamp',
-    location: 'Miami, FL',
-    description: 'I graduated after 6 months of studying. I immediately found a job as a front-end developer.',
+    title: 'Graduated Front-end Engineer',
+    location: 'Brussels, Belgium',
+    description:
+      'I graduated after 3 years of study, including 2 years on a work-study basis. Following this work-study program, I immediately found a job as a software engineer.',
     icon: React.createElement(LuGraduationCap),
-    date: '2019',
+    date: '2020 - 2023',
   },
   {
-    title: 'Front-End Developer',
-    location: 'Orlando, FL',
+    title: 'Front-end Engineer (CGS-CIMB Bank - CFD)',
+    location: 'Brussels, Belgium',
     description:
-      'I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.',
+      'I worked as a front-end developer for 1 year at this bank. I designed and built components for the portal and developed unit tests to ensure functionality using React, TypeScript, and Jest.',
     icon: React.createElement(CgWorkAlt),
-    date: '2019 - 2021',
+    date: '2021 - 2022',
   },
   {
-    title: 'Full-Stack Developer',
-    location: 'Houston, TX',
+    title: 'Front-end Engineer/Webmaster (Belfius)',
+    location: 'Brussels, Belgium',
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "I worked as both a front-end developer and webmaster at Belfius, one of Belgium's largest banks. I utilized various tools, including Angular, Dexie.js, SDL Tridion CMS, Figma, and Photoshop, to develop programs and create pages for the bank.",
+    icon: React.createElement(SiAngular),
+    date: '2022 - 2023',
+  },
+  ,
+  {
+    title: 'Front-end Engineer (CGS-CIMB Bank - ProsperUs)',
+    location: 'Brussels, Belgium',
+    description:
+      'I led feature development, ensured app performance, resolved conflicts, updated server versions, and managed the mobile app for a seamless user experience using React, TypeScript, and Android Studio.',
     icon: React.createElement(FaReact),
-    date: '2021 - present',
+    date: '2023 - present',
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: 'CorpComment',
+    title: 'Restaurant Zaytoon',
     description:
-      'I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.',
-    tags: ['React', 'Next.js', 'MongoDB', 'Tailwind', 'Prisma'],
-    imageUrl: corpcommentImg,
+      'A restaurant app for ordering, table booking, payments, and personalized emails, with a private dashboard for owners. It has features like filtering, sorting and pagination.',
+    tags: ['React', 'Node.js', 'Sass', 'Express', 'MySQL'],
+    imageUrl: zaytoonImg,
+    link: 'https://www.nautiljon.com',
   },
   {
-    title: 'rmtDev',
+    title: 'Marvel Quiz',
     description:
-      'Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.',
-    tags: ['React', 'TypeScript', 'Next.js', 'Tailwind', 'Redux'],
-    imageUrl: rmtdevImg,
+      'A Marvel quiz app that tests users knowledge about Marvel, calculates points, offers multiple levels based on scores, and allows sign-up/sign-in to access the quiz.',
+    tags: ['React', 'CSS3', 'Redux', 'Firebase'],
+    imageUrl: marvelImg,
+    link: 'https://marvel-quiz-d7f65.firebaseapp.com',
   },
   {
-    title: 'Word Analytics',
+    title: 'CarHub',
     description:
-      'A public web app for quick analytics on text. It shows word count, character count and social media post limits.',
-    tags: ['React', 'Next.js', 'SQL', 'Tailwind', 'Framer'],
-    imageUrl: wordanalyticsImg,
+      'Navigate through a comprehensive catalog of cars, effortlessly filter by years and fuels, and easily search by model or manufacturer. Your go-to app for discovering the perfect ride!',
+    tags: ['Next.js', 'TypeScript', 'Tailwind'],
+    imageUrl: carhubImg,
+    link: 'https://carhubpro.vercel.app',
   },
 ] as const;
 
@@ -90,17 +104,21 @@ export const skillsData = [
   'TypeScript',
   'React',
   'Next.js',
+  'Angular',
   'Node.js',
+  'PHP',
   'Git',
   'Tailwind',
-  'Prisma',
+  'Sass',
   'MongoDB',
+  'MySQL',
+  'Firebase',
   'Redux',
-  'GraphQL',
-  'Apollo',
   'Express',
-  'PostgreSQL',
-  'Python',
-  'Django',
   'Framer Motion',
+  'CMS',
+  'Jest',
+  'React Testing Library',
+  'Figma',
+  'Adobe XD',
 ] as const;
