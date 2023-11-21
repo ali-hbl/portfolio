@@ -7,7 +7,7 @@ import { projectsData } from '@/lib/data';
 
 type ProjectProps = (typeof projectsData)[number]; // will get the specific type of any field of any project in the datas
 
-export default function Project({ title, description, tags, imageUrl }: ProjectProps) {
+export default function Project({ title, description, tags, imageUrl, link }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({
@@ -29,11 +29,11 @@ export default function Project({ title, description, tags, imageUrl }: ProjectP
       }}
       className="group mb-3 last:mb-0 sm:mb-8"
     >
-      <section className="relative max-w-[42rem] overflow-hidden rounded-lg border border-black/5 bg-gray-100 transition hover:bg-gray-200 group-even:even:pl-8 dark:bg-white/10 dark:text-white dark:hover:bg-white/20 sm:h-[20rem] sm:pr-8">
-        <div className="flex h-full flex-col px-5 pb-7 pt-4 group-even:ml-[20rem] sm:max-w-[50%] sm:pl-10 sm:pr-2 sm:pt-10">
+      <section className="relative max-w-[42rem] overflow-hidden rounded-lg border border-black/5 bg-gray-100 transition hover:bg-gray-200 dark:bg-white/10 dark:text-white dark:hover:bg-white/20 sm:pr-8 sm:group-even:even:pl-8">
+        <div className="flex h-full flex-col px-5 pb-7 pt-4 sm:max-w-[50%] sm:pl-10 sm:pr-2 sm:pt-10 sm:group-even:ml-[20rem]">
           <h3 className="text-2xl font-semibold">{title}</h3>
-          <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">{description}</p>
-          <ul className="mt-4 flex flex-wrap gap-2 sm:mt-auto">
+          <p className="my-3 leading-relaxed text-gray-700 dark:text-white/70">{description}</p>
+          <ul className="mt-4 flex flex-wrap gap-2 py-2 sm:mt-auto">
             {tags.map((tag, i) => (
               <li
                 className="rounded-full bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white dark:text-white/70"
@@ -43,24 +43,29 @@ export default function Project({ title, description, tags, imageUrl }: ProjectP
               </li>
             ))}
           </ul>
+          {/* <small className="mt-4 italic text-gray-500 hover:text-gray-800 hover:underline dark:text-white/60 dark:hover:text-white/40 dark:hover:underline">
+              Click to visit
+            </small> */}
         </div>
 
-        <Image
-          src={imageUrl}
-          alt="Project I worked on"
-          quality={95}
-          className="absolute -right-40 top-8 w-[28.25rem] rounded-t-lg shadow-2xl transition
-          group-even:-left-40
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          <Image
+            src={imageUrl}
+            alt={title}
+            quality={95}
+            className="absolute -right-40 top-8 hidden w-[28.25rem] rounded-t-lg shadow-2xl transition group-even:-left-40
           group-even:right-[initial]
           group-hover:-translate-x-3
           group-hover:translate-y-3
-          
           group-hover:-rotate-2
+          
           group-hover:scale-[1.04]
           group-even:group-hover:translate-x-3
           group-even:group-hover:translate-y-3
-          group-even:group-hover:rotate-2"
-        />
+          group-even:group-hover:rotate-2
+          sm:block"
+          />
+        </a>
       </section>
     </motion.div>
   );
