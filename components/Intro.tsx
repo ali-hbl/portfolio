@@ -52,9 +52,9 @@ export default function Intro() {
         animate={{ opacity: 1, y: 0 }}
       >
         <span className="font-bold">Hello, I'm Ali.</span> I'm a
-        <span className="font-bold"> full-stack developer </span>
+        <span className="font-bold"> front-end developer </span>
         with <span className="font-bold">2 years</span> of experience. I enjoy building
-        <span className="italic"> sites & apps</span>. My focus is <span className="underline">React (Next.js)</span>.
+        <span className="italic"> sites & apps</span>. My focus is <span className="underline">React</span>.
       </motion.h1>
 
       <motion.div
@@ -76,7 +76,7 @@ export default function Intro() {
 
         <a
           className="group flex cursor-pointer items-center gap-2 rounded-full border-black bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-white/10"
-          href="/CV.pdf"
+          href="/public/CV  - Ali HABOULA (EN).pdf"
           download
         >
           Download CV <HiDownload className="opacity-60 transition group-hover:translate-y-1" />

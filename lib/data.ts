@@ -1,11 +1,11 @@
+import carhubImg from '@/public/carhub.png';
+import marvelImg from '@/public/marvel.png';
+import zaytoonImg from '@/public/zaytoon.png';
 import React from 'react';
 import { CgWorkAlt } from 'react-icons/cg';
 import { FaReact } from 'react-icons/fa';
-import { SiAngular } from 'react-icons/si';
 import { LuGraduationCap } from 'react-icons/lu';
-import zaytoonImg from '@/public/zaytoon.png';
-import marvelImg from '@/public/marvel.png';
-import carhubImg from '@/public/carhub.png';
+import { SiAngular } from 'react-icons/si';
 
 export const links = [
   {
@@ -66,7 +66,15 @@ export const experiencesData = [
     description:
       'I led feature development, ensured app performance, resolved conflicts, updated server versions, and managed the mobile app for a seamless user experience using React, TypeScript, and Android Studio.',
     icon: React.createElement(FaReact),
-    date: '2023 - present',
+    date: '2023 - 2024',
+  },
+  {
+    title: 'Front-end Engineer (Gembaa - Staizen internal project)',
+    location: 'Brussels, Belgium',
+    description:
+      'I designed and built components for this internal tool whose purpose is to be sold to potential customers.',
+    icon: React.createElement(FaReact),
+    date: '2023 - 2024',
   },
 ] as const;
 
@@ -77,7 +85,7 @@ export const projectsData = [
       'A restaurant app for ordering, table booking, payments, and personalized emails, with a private dashboard for owners. It has features like filtering, sorting and pagination.',
     tags: ['React', 'Node.js', 'Sass', 'Express', 'MySQL'],
     imageUrl: zaytoonImg,
-    link: '/',
+    link: '',
   },
   {
     title: 'Marvel Quiz',
@@ -103,9 +111,9 @@ export const skillsData = [
   'JavaScript',
   'TypeScript',
   'React',
-  'Next.js',
   'Angular',
   'Node.js',
+  'Next.js',
   'PHP',
   'Git',
   'Tailwind',
