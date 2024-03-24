@@ -2,7 +2,6 @@ import carhubImg from '@/public/carhub.png';
 import marvelImg from '@/public/marvel.png';
 import zaytoonImg from '@/public/zaytoon.png';
 import React from 'react';
-import { CgWorkAlt } from 'react-icons/cg';
 import { FaReact } from 'react-icons/fa';
 import { LuGraduationCap } from 'react-icons/lu';
 import { SiAngular } from 'react-icons/si';
@@ -48,7 +47,7 @@ export const experiencesData = [
     location: 'Brussels, Belgium',
     description:
       'I worked as a front-end developer for 1 year at this bank. I designed and built components for the portal and developed unit tests to ensure functionality using React, TypeScript, and Jest.',
-    icon: React.createElement(CgWorkAlt),
+    icon: React.createElement(FaReact),
     date: '2021 - 2022',
   },
   {
