@@ -84,7 +84,7 @@ export const projectsData = [
       'A restaurant app for ordering, table booking, payments, and personalized emails, with a private dashboard for owners. It has features like filtering, sorting and pagination.',
     tags: ['React', 'Node.js', 'Sass', 'Express', 'MySQL'],
     imageUrl: zaytoonImg,
-    link: '',
+    link: '/',
   },
   {
     title: 'Marvel Quiz',
