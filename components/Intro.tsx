@@ -1,15 +1,14 @@
 'use client';
 
-import React from 'react';
-import Image from 'next/image';
-import pp from '@/public/pp.jpeg';
-import Link from 'next/link';
 import { useActiveSectionContext } from '@/context/ActiveSectionContext';
-import { motion } from 'framer-motion';
-import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
-import { HiDownload } from 'react-icons/hi';
-import { FaGithubSquare } from 'react-icons/fa';
 import { useSectionInView } from '@/hooks/useSectionInView';
+import pp from '@/public/pp.jpeg';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import Link from 'next/link';
+import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
+import { FaGithubSquare } from 'react-icons/fa';
+import { HiDownload } from 'react-icons/hi';
 
 export default function Intro() {
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
@@ -51,8 +50,7 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm Ali.</span> I'm a
-        <span className="font-bold"> front-end developer </span>
+        <span className="font-bold">Hello, I'm Ali.</span> I'm a<span className="font-bold"> front-end developer </span>
         with <span className="font-bold">3 years</span> of experience. I enjoy building
         <span className="italic"> sites & apps</span>. My focus is <span className="underline">React</span>.
       </motion.h1>
@@ -76,7 +74,7 @@ export default function Intro() {
 
         <a
           className="group flex cursor-pointer items-center gap-2 rounded-full border-black bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-white/10"
-          href="/public/CV.pdf"
+          href="/public/assets/CV.pdf"
           download
         >
           Download CV <HiDownload className="opacity-60 transition group-hover:translate-y-1" />
