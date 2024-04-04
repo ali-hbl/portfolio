@@ -72,13 +72,13 @@ export default function Intro() {
           Contact me here <BsArrowRight className="opacity-70 transition group-hover:translate-x-1" />
         </Link>
 
-        <a
+        {/* <a
           className="group flex cursor-pointer items-center gap-2 rounded-full border-black bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-white/10"
-          href="/public/assets/CV.pdf"
+          href="/public/CV.pdf"
           download
         >
           Download CV <HiDownload className="opacity-60 transition group-hover:translate-y-1" />
-        </a>
+        </a> */}
 
         <a
           className="flex cursor-pointer items-center gap-2 rounded-full border-black bg-white p-4 py-3 text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/70"
