@@ -10,7 +10,7 @@ import { useRef } from 'react';
 type ProjectProps = {
   title: string;
   description: string;
-  tags: string[];
+  tags: ReadonlyArray<string>;
   imageUrl: StaticImageData;
   link: LinkType;
 };
