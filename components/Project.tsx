@@ -54,9 +54,9 @@ export default function Project({ title, description, tags, imageUrl, link }: Pr
                 </li>
               ))}
             </ul>
-            {/* <small className="mt-4 italic text-gray-500 hover:text-gray-800 hover:underline dark:text-white/60 dark:hover:text-white/40 dark:hover:underline">
+            <small className="mt-4 italic text-gray-500 hover:text-gray-800 hover:underline dark:text-white/60 dark:hover:text-white/40 dark:hover:underline">
               Click to visit
-            </small> */}
+            </small>
           </div>
 
           <Image
