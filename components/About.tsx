@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import SectionHeading from './SectionHeading';
 
 export default function About() {
-  const { ref } = useSectionInView('About');
+  const { ref } = useSectionInView('À propos');
 
   return (
     <motion.section
@@ -16,22 +16,44 @@ export default function About() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
     >
-      <SectionHeading>About me</SectionHeading>
-      <p className="mb-3">
-        Passionate about <span className="font-medium">technology, music and sports,</span> I am a driven individual
-        with a <span className="font-medium">strong desire to learn.</span> With a{' '}
-        <span className="font-medium">commitment to excellence,</span> I am constantly seeking new challenges and
-        opportunities to <span className="font-medium">expand my skills and knowledge.</span> Whether it's writing code
-        or creating a melodious composition, I approach each task with{' '}
-        <span className="font-medium">energy and dedication, always striving to improve and succeed.</span>
-        <br />
-        <br />I <span className="underline">love</span> the feeling of finally figuring out a solution to a problem. My
-        core stack is <span className="font-medium">React, TypeScript, Node.js and MongoDB</span>. I am also familiar with
-        Next.js and Prisma. I am always looking to learn new technologies.
-      </p>
-      <p>
-        <span className="italic">When I'm not coding</span>, I enjoy playing guitar, composing music, boxing and watching series.
-      </p>
+      <SectionHeading>
+        <span className="normal-case">Créons ensemble votre présence en ligne</span>
+      </SectionHeading>
+
+      <div className="space-y-6">
+        <p>
+          <span className="font-medium">Un site web sur mesure, qui travaille pour vous.</span>
+        </p>
+
+        <p>
+          Je conçois des sites <span className="font-medium">professionnels</span>,
+          <span className="font-medium"> optimisés pour les moteurs de recherche</span> et
+          <span className="font-medium"> simples à administrer</span>. Idéal pour les{' '}
+          <span className="font-medium">entrepreneurs</span>,<span className="font-medium"> artisans</span>,
+          <span className="font-medium"> restaurateurs</span> ou
+          <span className="font-medium"> associations</span> qui veulent passer au digital, simplement.
+        </p>
+
+        <p>
+          <span className="font-medium">
+            Réservation en ligne, prise de rendez-vous, catalogue de produits, menus interactifs, paiement sécurisé,
+            formulaire de contact, intégration réseaux sociaux… tout est possible.
+          </span>
+        </p>
+
+        <p>
+          <span className="italic">Et quand je déconnecte</span>,{' '}
+          <a
+            href="https://www.instagram.com/ally.guitar/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline dark:text-blue-300"
+          >
+            je me perds dans ma guitare
+          </a>
+          , j’explore la musique, j’enfile les gants de boxe ou je dévore une bonne série.
+        </p>
+      </div>
     </motion.section>
   );
 }

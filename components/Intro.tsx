@@ -11,7 +11,7 @@ import { FaGithubSquare } from 'react-icons/fa';
 
 export default function Intro() {
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
-  const { ref } = useSectionInView('Home', 0.6);
+  const { ref } = useSectionInView('Accueil', 0.6);
 
   return (
     <section id="home" ref={ref} className="mb-28 max-w-[50rem] scroll-mt-[100rem] text-center sm:mb-0">

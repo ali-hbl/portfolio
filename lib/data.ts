@@ -8,23 +8,23 @@ import { SiAngular } from 'react-icons/si';
 
 export const links = [
   {
-    name: 'Home',
+    name: 'Accueil',
     hash: '#home',
   },
   {
-    name: 'About',
+    name: 'À propos',
     hash: '#about',
   },
   {
-    name: 'Projects',
+    name: 'Projets',
     hash: '#projects',
   },
   {
-    name: 'Skills',
+    name: 'Compétences',
     hash: '#skills',
   },
   {
-    name: 'Experience',
+    name: 'Expérience',
     hash: '#experience',
   },
   {
