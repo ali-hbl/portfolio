@@ -24,17 +24,17 @@ export default function Intro() {
           >
             <Image
               src={pp}
-              alt="Profile picture"
-              width={192}
-              height={192}
+              alt="Photo de profil"
+              width={224}
+              height={224}
               quality={95}
               priority={true}
-              className="h-24 w-24 rounded-full border-[0.35rem] border-white object-cover shadow-xl"
+              className="h-40 w-40 rounded-full border-[0.35rem] border-white object-cover shadow-xl"
             />
           </motion.div>
 
           <motion.span
-            className="absolute bottom-0 right-0 text-4xl"
+            className="absolute bottom-1 right-1 text-5xl"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ type: 'spring', stiffness: 125, delay: 0.1, duration: 0.7 }}
@@ -45,12 +45,15 @@ export default function Intro() {
       </div>
 
       <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+        className="mb-10 mt-4 px-4 text-xl font-medium !leading-[1.5] sm:text-4xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm Ali.</span> I'm a<span className="font-bold"> Software Engineer</span>. <br />I
-        enjoy building <span className="italic"> sites & apps</span>.
+        <p>
+          <span className="font-bold">Hello, je suis Ali.</span>
+        </p>
+        Je vous aide à <span className="font-bold">exister en ligne</span> grâce à des sites{' '}
+        <span className="italic">modernes et simples à utiliser</span>.
       </motion.h1>
 
       <motion.div
@@ -67,7 +70,7 @@ export default function Intro() {
             setTimeOfLastClick(Date.now());
           }}
         >
-          Contact me here <BsArrowRight className="opacity-70 transition group-hover:translate-x-1" />
+          Me contacter <BsArrowRight className="opacity-70 transition group-hover:translate-x-1" />
         </Link>
 
         {/* <a
