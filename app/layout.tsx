@@ -1,17 +1,21 @@
-import './globals.css';
-import { Inter } from 'next/font/google';
-import Header from '@/components/Header';
-import ActiveSectionContextProvider from '@/context/ActiveSectionContext';
-import { Toaster } from 'react-hot-toast';
 import Footer from '@/components/Footer';
+import Header from '@/components/Header';
 import ThemeSwitch from '@/components/ThemeSwitch';
+import ActiveSectionContextProvider from '@/context/ActiveSectionContext';
 import ThemeContextProvider from '@/context/ThemeContext';
+import { Inter } from 'next/font/google';
+import { Toaster } from 'react-hot-toast';
+import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Ali | Personal Portfolio',
-  description: 'Ali is a front-end developer with 2 years of experience.',
+  title: 'Ali | Développeur freelance — Création de sites web modernes',
+  description:
+    'Conception de sites vitrines, boutiques en ligne et applications web modernes. Développeur freelance spécialisé en sites performants et bien référencés.',
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
