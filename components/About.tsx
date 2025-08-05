@@ -44,10 +44,10 @@ export default function About() {
         <p>
           <span className="italic">Et quand je déconnecte</span>,{' '}
           <a
-            href="https://www.instagram.com/ally.guitar/"
+            href="https://www.instagram.com/ally.guitar"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline dark:text-blue-300"
+            className="text-slate-600 hover:text-blue-600 hover:underline dark:text-slate-400 dark:hover:text-blue-400"
           >
             je me perds dans ma guitare
           </a>
