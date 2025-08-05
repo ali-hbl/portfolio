@@ -32,6 +32,7 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
     "@types/react-vertical-timeline-component": "^3.3.4",
     "prettier-plugin-tailwindcss": "^0.5.4"
   }

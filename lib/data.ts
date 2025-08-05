@@ -2,9 +2,13 @@ import carhubImg from '@/public/carhub.png';
 import marvelImg from '@/public/marvel.png';
 import zaytoonImg from '@/public/zaytoon.png';
 import React from 'react';
-import { FaReact } from 'react-icons/fa';
 import { LuGraduationCap } from 'react-icons/lu';
-import { SiAngular } from 'react-icons/si';
+import CIMB_Logo from '../public/CIMB_Logo.svg';
+import BelfiusLogo from '../public/BelfiusLogo.svg';
+import staizenLogo from '../public/staizenLogo.svg';
+// import BelfiusLogoWhite from '../public/BelfiusLogoWhite.svg';
+// import { FaReact } from 'react-icons/fa';
+// import { SiAngular } from 'react-icons/si';
 
 export const links = [
   {
@@ -47,7 +51,7 @@ export const experiencesData = [
     location: 'Brussels, Belgium',
     description:
       'I worked as a front-end developer for 1 year at this bank. I designed and built components for the portal and developed unit tests to ensure functionality using React, TypeScript, and Jest.',
-    icon: React.createElement(FaReact),
+    icon: React.createElement(CIMB_Logo),
     date: '2021 - 2022',
   },
   {
@@ -55,7 +59,8 @@ export const experiencesData = [
     location: 'Brussels, Belgium',
     description:
       "I worked as both a front-end developer and webmaster at Belfius, one of Belgium's largest banks. I utilized various tools, including Angular, Dexie.js, SDL Tridion CMS, Figma, and Photoshop, to develop programs and create pages for the bank.",
-    icon: React.createElement(SiAngular),
+    icon: React.createElement(BelfiusLogo),
+    // icon: React.createElement(BelfiusLogoWhite),
     date: '2022 - 2023',
   },
   ,
@@ -64,7 +69,7 @@ export const experiencesData = [
     location: 'Brussels, Belgium',
     description:
       'I led feature development, ensured app performance, resolved conflicts, updated server versions, and managed the mobile app for a seamless user experience using React, TypeScript, and Android Studio.',
-    icon: React.createElement(FaReact),
+    icon: React.createElement(CIMB_Logo),
     date: '2023 - 2024',
   },
   {
@@ -72,7 +77,7 @@ export const experiencesData = [
     location: 'Brussels, Belgium',
     description:
       'I designed and built components for this internal tool whose purpose is to be sold to potential customers.',
-    icon: React.createElement(FaReact),
+    icon: React.createElement(staizenLogo),
     date: '2023 - 2024',
   },
 ] as const;
