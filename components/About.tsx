@@ -17,7 +17,7 @@ export default function About() {
       transition={{ delay: 0.175 }}
     >
       <SectionHeading>
-        <span >Créons ensemble votre présence en ligne</span>
+        <span className='normal-case'>Créons ensemble votre présence en ligne</span>
       </SectionHeading>
 
       <div className="space-y-6">
