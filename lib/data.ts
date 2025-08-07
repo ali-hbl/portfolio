@@ -3,8 +3,8 @@ import marvelImg from '@/public/marvel.png';
 import zaytoonImg from '@/public/zaytoon.png';
 import React from 'react';
 import { LuGraduationCap } from 'react-icons/lu';
-import CIMB_Logo from '../public/CIMB_Logo.svg';
 import BelfiusLogo from '../public/BelfiusLogo.svg';
+import CIMB_Logo from '../public/CIMB_Logo.svg';
 import staizenLogo from '../public/staizenLogo.svg';
 // import BelfiusLogoWhite from '../public/BelfiusLogoWhite.svg';
 // import { FaReact } from 'react-icons/fa';
@@ -77,7 +77,7 @@ export const experiencesData = [
     location: 'Brussels, Belgium',
     description:
       'I designed and built components for this internal tool whose purpose is to be sold to potential customers.',
-    icon: React.createElement(staizenLogo),
+    icon: React.createElement(staizenLogo, { style: { borderRadius: '5px' } }),
     date: '2023 - 2024',
   },
 ] as const;
@@ -86,25 +86,25 @@ export type LinkType = string | (() => void);
 
 export const projectsData = [
   {
-    title: 'Restaurant Zaytoon',
+    title: '🥘 Restaurant Zaytoon',
     description:
-      'A restaurant app for ordering, table booking, payments, and personalized emails, with a private dashboard for owners. It has features like filtering, sorting and pagination.',
+      'Une application conçue pour les restaurants : commandes en ligne, réservations de table, paiements, emails personnalisés, et un espace privé pour les gérants. Idéal pour améliorer l’expérience client et simplifier la gestion au quotidien.',
     tags: ['React', 'Node.js', 'Sass', 'Express', 'MySQL'],
     imageUrl: zaytoonImg,
     link: 'https://restaurant-zaytoon.vercel.app',
   },
   {
-    title: 'Marvel Quiz',
+    title: '🦸 Marvel Quiz',
     description:
-      'A Marvel quiz app that tests users knowledge about Marvel, calculates points, offers multiple levels based on scores, and allows sign-up/sign-in to access the quiz.',
+      'Un quiz interactif sur l’univers Marvel. Il permet aux fans de tester leurs connaissances, de progresser par niveaux et de sauvegarder leur score. Un bon exemple d’application ludique avec système de connexion sécurisé.',
     tags: ['React', 'CSS3', 'Redux', 'Firebase'],
     imageUrl: marvelImg,
     link: 'https://marvel-quiz-d7f65.firebaseapp.com',
   },
   {
-    title: 'CarHub',
+    title: '🚗 CarHub',
     description:
-      'Navigate through a comprehensive catalog of cars, effortlessly filter by years and fuels, and easily search by model or manufacturer. Your go-to app for discovering the perfect ride!',
+      'Une plateforme simple et rapide pour rechercher des véhicules par marque, modèle, année ou type de carburant. Parfait pour les garages ou vendeurs automobiles souhaitant moderniser leur catalogue.',
     tags: ['Next.js', 'TypeScript', 'Tailwind'],
     imageUrl: carhubImg,
     link: 'https://carhubpro.vercel.app',
