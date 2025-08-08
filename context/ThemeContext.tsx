@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, createContext, useContext } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 
 type Theme = 'light' | 'dark';
 
@@ -16,34 +16,30 @@ type ThemeContextProviderProps = {
 const ThemeContext = createContext<ThemeContextType | null>(null);
 
 export default function ThemeContextProvider({ children }: ThemeContextProviderProps) {
-  const [theme, setTheme] = useState<Theme>('light');
+  // Thème par défaut = "dark"
+  const [theme, setTheme] = useState<Theme>('dark');
 
   useEffect(() => {
     const localTheme = window.localStorage.getItem('theme') as Theme | null;
 
     if (localTheme) {
       setTheme(localTheme);
-
-      if (localTheme === 'dark') {
-        document.documentElement.classList.add('dark');
-      }
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      // the line above will detect user's device preferences to set the theme accordingly
-      setTheme('dark');
+      document.documentElement.classList.toggle('dark', localTheme === 'dark');
+    } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+      // Si l'utilisateur préfère explicitement le clair, on applique "light"
+      setTheme('light');
+      document.documentElement.classList.remove('dark');
+    } else {
+      // Sinon on garde le dark par défaut
       document.documentElement.classList.add('dark');
     }
   }, []);
 
   const toggleTheme = () => {
-    if (theme === 'light') {
-      setTheme('dark');
-      window.localStorage.setItem('theme', 'dark');
-      document.documentElement.classList.add('dark');
-    } else {
-      setTheme('light');
-      window.localStorage.setItem('theme', 'light');
-      document.documentElement.classList.remove('dark');
-    }
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    window.localStorage.setItem('theme', newTheme);
+    document.documentElement.classList.toggle('dark', newTheme === 'dark');
   };
 
   return <ThemeContext.Provider value={{ theme, toggleTheme }}>{children}</ThemeContext.Provider>;
