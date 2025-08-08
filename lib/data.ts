@@ -1,7 +1,9 @@
+import React from 'react';
+
 import carhubImg from '@/public/carhub.png';
 import marvelImg from '@/public/marvel.png';
 import zaytoonImg from '@/public/zaytoon.png';
-import React from 'react';
+
 import { LuGraduationCap } from 'react-icons/lu';
 import BelfiusLogo from '../public/BelfiusLogo.svg';
 import CIMB_Logo from '../public/CIMB_Logo.svg';
@@ -9,6 +11,32 @@ import staizenLogo from '../public/staizenLogo.svg';
 // import BelfiusLogoWhite from '../public/BelfiusLogoWhite.svg';
 // import { FaReact } from 'react-icons/fa';
 // import { SiAngular } from 'react-icons/si';
+
+import { FaJava } from 'react-icons/fa';
+import {
+  SiAdobexd,
+  SiAngular,
+  SiCss3,
+  SiExpress,
+  SiFigma,
+  SiFirebase,
+  SiGit,
+  SiHtml5,
+  SiJavascript,
+  SiJest,
+  SiMongodb,
+  SiMysql,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiPhp,
+  SiPostgresql,
+  SiReact,
+  SiSass,
+  SiStripe,
+  SiTailwindcss,
+  SiTestinglibrary,
+  SiTypescript,
+} from 'react-icons/si';
 
 export const links = [
   {
@@ -111,28 +139,78 @@ export const projectsData = [
   },
 ] as const;
 
-export const skillsData = [
-  'HTML',
-  'CSS',
-  'JavaScript',
-  'TypeScript',
-  'React',
-  'Angular',
-  'Node.js',
-  'Next.js',
-  'PHP',
-  'Git',
-  'Tailwind',
-  'Sass',
-  'MongoDB',
-  'MySQL',
-  'Firebase',
-  'Redux',
-  'Express',
-  'Framer Motion',
-  'CMS',
-  'Jest',
-  'React Testing Library',
-  'Figma',
-  'Adobe XD',
+export const skillsByCategory = [
+  {
+    title: 'Création de sites & applications web',
+    benefit: 'Interfaces modernes, rapides et accessibles.',
+    items: [
+      { label: 'HTML', icon: SiHtml5 },
+      { label: 'CSS', icon: SiCss3 },
+      { label: 'JavaScript', icon: SiJavascript },
+      { label: 'TypeScript', icon: SiTypescript },
+      { label: 'React', icon: SiReact },
+      { label: 'Next.js', icon: SiNextdotjs },
+      { label: 'Angular', icon: SiAngular },
+      { label: 'Tailwind', icon: SiTailwindcss },
+      { label: 'Sass', icon: SiSass },
+    ],
+  },
+  {
+    title: 'Paiements en ligne & gestion des données',
+    benefit: 'Logique métier fiable, gestion des données et sécurité de votre site.',
+    items: [
+      { label: 'PHP', icon: SiPhp },
+      { label: 'Node.js', icon: SiNodedotjs },
+      { label: 'Express', icon: SiExpress },
+      { label: 'Java', icon: FaJava },
+      { label: 'PostgreSQL', icon: SiPostgresql },
+      { label: 'MySQL', icon: SiMysql },
+      { label: 'MongoDB', icon: SiMongodb },
+      { label: 'Firebase', icon: SiFirebase },
+      { label: 'Stripe', icon: SiStripe },
+    ],
+  },
+  {
+    title: 'Qualité & tests',
+    benefit: 'Moins de bugs, déploiements sereins.',
+    items: [
+      { label: 'Jest', icon: SiJest },
+      { label: 'React Testing Library', icon: SiTestinglibrary },
+    ],
+  },
+  {
+    title: 'Design & outils',
+    benefit: 'Maquettes claires et collaboration fluide.',
+    items: [
+      { label: 'Figma', icon: SiFigma },
+      { label: 'Adobe XD', icon: SiAdobexd },
+      { label: 'Git', icon: SiGit },
+    ],
+  },
 ] as const;
+
+// export const skillsData = [
+//   'HTML',
+//   'CSS',
+//   'JavaScript',
+//   'TypeScript',
+//   'React',
+//   'Angular',
+//   'Node.js',
+//   'Next.js',
+//   'PHP',
+//   'Git',
+//   'Tailwind',
+//   'Sass',
+//   'MongoDB',
+//   'MySQL',
+//   'Firebase',
+//   'Redux',
+//   'Express',
+//   'Framer Motion',
+//   'CMS',
+//   'Jest',
+//   'React Testing Library',
+//   'Figma',
+//   'Adobe XD',
+// ] as const;
