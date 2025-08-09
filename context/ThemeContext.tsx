@@ -16,8 +16,7 @@ type ThemeContextProviderProps = {
 const ThemeContext = createContext<ThemeContextType | null>(null);
 
 export default function ThemeContextProvider({ children }: ThemeContextProviderProps) {
-  // Thème par défaut = "dark"
-  const [theme, setTheme] = useState<Theme>('dark');
+  const [theme, setTheme] = useState<Theme>('dark'); // par défaut: dark
 
   useEffect(() => {
     const localTheme = window.localStorage.getItem('theme') as Theme | null;
@@ -25,18 +24,15 @@ export default function ThemeContextProvider({ children }: ThemeContextProviderP
     if (localTheme) {
       setTheme(localTheme);
       document.documentElement.classList.toggle('dark', localTheme === 'dark');
-    } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-      // Si l'utilisateur préfère explicitement le clair, on applique "light"
-      setTheme('light');
-      document.documentElement.classList.remove('dark');
     } else {
-      // Sinon on garde le dark par défaut
+      // Si pas de localStorage → on garde dark par défaut
       document.documentElement.classList.add('dark');
     }
   }, []);
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
+    
     setTheme(newTheme);
     window.localStorage.setItem('theme', newTheme);
     document.documentElement.classList.toggle('dark', newTheme === 'dark');
