@@ -12,7 +12,7 @@ import staizenLogo from '../public/staizenLogo.svg';
 // import { FaReact } from 'react-icons/fa';
 // import { SiAngular } from 'react-icons/si';
 
-import { FaJava } from 'react-icons/fa';
+import { FaJava, FaLaptopCode } from 'react-icons/fa';
 import {
   SiAdobexd,
   SiAngular,
@@ -65,48 +65,99 @@ export const links = [
   },
 ] as const;
 
+// export const experiencesData = [
+//   {
+//     title: 'Graduated Front-end Engineer',
+//     location: 'Brussels, Belgium',
+//     description:
+//       'I graduated after 3 years of study, including 2 years on a work-study basis. Following this work-study program, I immediately found a job as a software engineer.',
+//     icon: React.createElement(LuGraduationCap),
+//     date: '2020 - 2023',
+//   },
+//   {
+//     title: 'Front-end Engineer (CGS-CIMB Bank - CFD)',
+//     location: 'Brussels, Belgium',
+//     description:
+//       'I worked as a front-end developer for 1 year at this bank. I designed and built components for the portal and developed unit tests to ensure functionality using React, TypeScript, and Jest.',
+//     icon: React.createElement(CIMB_Logo),
+//     date: '2021 - 2022',
+//   },
+//   {
+//     title: 'Front-end Engineer/Webmaster (Belfius)',
+//     location: 'Brussels, Belgium',
+//     description:
+//       "I worked as both a front-end developer and webmaster at Belfius, one of Belgium's largest banks. I utilized various tools, including Angular, Dexie.js, SDL Tridion CMS, Figma, and Photoshop, to develop programs and create pages for the bank.",
+//     icon: React.createElement(BelfiusLogo),
+//     // icon: React.createElement(BelfiusLogoWhite),
+//     date: '2022 - 2023',
+//   },
+//   ,
+//   {
+//     title: 'Front-end Engineer (CGS-CIMB Bank - ProsperUs)',
+//     location: 'Brussels, Belgium',
+//     description:
+//       'I led feature development, ensured app performance, resolved conflicts, updated server versions, and managed the mobile app for a seamless user experience using React, TypeScript, and Android Studio.',
+//     icon: React.createElement(CIMB_Logo),
+//     date: '2023 - 2024',
+//   },
+//   {
+//     title: 'Front-end Engineer (Gembaa - Staizen internal project)',
+//     location: 'Brussels, Belgium',
+//     description:
+//       'I designed and built components for this internal tool whose purpose is to be sold to potential customers.',
+//     icon: React.createElement(staizenLogo, { style: { borderRadius: '5px' } }),
+//     date: '2023 - 2024',
+//   },
+// ] as const;
+
 export const experiencesData = [
   {
-    title: 'Graduated Front-end Engineer',
-    location: 'Brussels, Belgium',
+    title: 'Formation et premières réalisations',
+    location: 'Bruxelles, Belgique',
     description:
-      'I graduated after 3 years of study, including 2 years on a work-study basis. Following this work-study program, I immediately found a job as a software engineer.',
-    icon: React.createElement(LuGraduationCap),
+      'Réalisation de mes premiers sites et applications pour de vrais clients durant mes études en alternance, alliant design moderne et performance technique.',
+    icon: React.createElement(FaLaptopCode),
     date: '2020 - 2023',
   },
   {
-    title: 'Front-end Engineer (CGS-CIMB Bank - CFD)',
-    location: 'Brussels, Belgium',
+    title: 'CIMB Bank',
+    location: 'Bruxelles, Belgique',
     description:
-      'I worked as a front-end developer for 1 year at this bank. I designed and built components for the portal and developed unit tests to ensure functionality using React, TypeScript, and Jest.',
+      'Conception et intégration d’interfaces fluides pour le portail en ligne de la banque, offrant une navigation simplifiée, un gain de temps pour les utilisateurs et une image de marque renforcée.',
     icon: React.createElement(CIMB_Logo),
     date: '2021 - 2022',
   },
   {
-    title: 'Front-end Engineer/Webmaster (Belfius)',
-    location: 'Brussels, Belgium',
+    title: 'Belfius',
+    location: 'Bruxelles, Belgique',
     description:
-      "I worked as both a front-end developer and webmaster at Belfius, one of Belgium's largest banks. I utilized various tools, including Angular, Dexie.js, SDL Tridion CMS, Figma, and Photoshop, to develop programs and create pages for the bank.",
+      'Refonte et optimisation de pages web pour Belfius, l’une des plus grandes banques belges, afin d’améliorer la performance et l’image en ligne de la marque.',
     icon: React.createElement(BelfiusLogo),
-    // icon: React.createElement(BelfiusLogoWhite),
     date: '2022 - 2023',
   },
-  ,
   {
-    title: 'Front-end Engineer (CGS-CIMB Bank - ProsperUs)',
-    location: 'Brussels, Belgium',
+    title: 'CIMB Bank',
+    location: 'Bruxelles, Belgique',
     description:
-      'I led feature development, ensured app performance, resolved conflicts, updated server versions, and managed the mobile app for a seamless user experience using React, TypeScript, and Android Studio.',
+      'Développement de nouvelles fonctionnalités et optimisation des performances de l’application mobile bancaire, pour une utilisation plus fluide et fiable.',
     icon: React.createElement(CIMB_Logo),
     date: '2023 - 2024',
   },
   {
-    title: 'Front-end Engineer (Gembaa - Staizen internal project)',
-    location: 'Brussels, Belgium',
+    title: 'Gembaa – Staizen (projet interne)',
+    location: 'Bruxelles, Belgique',
     description:
-      'I designed and built components for this internal tool whose purpose is to be sold to potential customers.',
+      'Développement d’interfaces pour Gembaa, une plateforme innovante de planification d’entreprise, conçue pour optimiser la répartition des ressources et améliorer la collaboration des équipes.',
     icon: React.createElement(staizenLogo, { style: { borderRadius: '5px' } }),
     date: '2023 - 2024',
+  },
+  {
+    title: 'Bachelier en informatique de gestion',
+    location: 'EPFC – Bruxelles',
+    description:
+      'Approfondissement des compétences en développement, bases de données et réseaux, avec des projets pratiques orientés entreprise.',
+    icon: React.createElement(LuGraduationCap),
+    date: '2025 - en cours',
   },
 ] as const;
 
