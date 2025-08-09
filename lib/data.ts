@@ -144,16 +144,16 @@ export const experiencesData = [
     date: '2023 - 2024',
   },
   {
-    title: 'Gembaa – Staizen (projet interne)',
+    title: 'Staizen',
     location: 'Bruxelles, Belgique',
     description:
-      'Développement d’interfaces pour Gembaa, plateforme innovante de planification d’entreprise, afin de faciliter la collaboration entre équipes.',
+      "Développement de l'application « Gembaa », plateforme innovante de planification d’entreprise, afin de faciliter la collaboration entre équipes.",
     icon: React.createElement(staizenLogo, { style: { borderRadius: '5px' } }),
     date: '2023 - 2024',
   },
   {
     title: 'Bachelier en informatique de gestion',
-    location: 'EPFC – Bruxelles',
+    location: 'Bruxelles, Belgique',
     description:
       'Renforcement des compétences en développement, bases de données et réseaux à travers des projets pratiques orientés entreprise.',
     icon: React.createElement(LuGraduationCap),
