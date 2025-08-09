@@ -115,7 +115,7 @@ export const experiencesData = [
     title: 'Formation et premières réalisations',
     location: 'Bruxelles, Belgique',
     description:
-      'Réalisation de mes premiers sites et applications pour de vrais clients durant mes études en alternance, alliant design moderne et performance technique.',
+      'Lors de mon alternance, j’ai développé mes premiers sites et applications pour des clients, en proposant des solutions modernes et performantes.',
     icon: React.createElement(FaLaptopCode),
     date: '2020 - 2023',
   },
@@ -123,7 +123,7 @@ export const experiencesData = [
     title: 'CIMB Bank',
     location: 'Bruxelles, Belgique',
     description:
-      'Conception et intégration d’interfaces fluides pour le portail en ligne de la banque, offrant une navigation simplifiée, un gain de temps pour les utilisateurs et une image de marque renforcée.',
+      'Création d’interfaces sur mesure pour le portail en ligne de la banque, offrant une expérience fluide, un accès rapide aux services et une image de marque renforcée.',
     icon: React.createElement(CIMB_Logo),
     date: '2021 - 2022',
   },
@@ -139,7 +139,7 @@ export const experiencesData = [
     title: 'CIMB Bank',
     location: 'Bruxelles, Belgique',
     description:
-      'Développement de nouvelles fonctionnalités et optimisation des performances de l’application mobile bancaire, pour une utilisation plus fluide et fiable.',
+      'Développement de nouvelles fonctionnalités et optimisation des performances de l’application mobile bancaire pour offrir une expérience plus fluide et fiable.',
     icon: React.createElement(CIMB_Logo),
     date: '2023 - 2024',
   },
@@ -147,7 +147,7 @@ export const experiencesData = [
     title: 'Gembaa – Staizen (projet interne)',
     location: 'Bruxelles, Belgique',
     description:
-      'Développement d’interfaces pour Gembaa, une plateforme innovante de planification d’entreprise, conçue pour optimiser la répartition des ressources et améliorer la collaboration des équipes.',
+      'Développement d’interfaces pour Gembaa, plateforme innovante de planification d’entreprise, afin de faciliter la collaboration entre équipes.',
     icon: React.createElement(staizenLogo, { style: { borderRadius: '5px' } }),
     date: '2023 - 2024',
   },
@@ -155,7 +155,7 @@ export const experiencesData = [
     title: 'Bachelier en informatique de gestion',
     location: 'EPFC – Bruxelles',
     description:
-      'Approfondissement des compétences en développement, bases de données et réseaux, avec des projets pratiques orientés entreprise.',
+      'Renforcement des compétences en développement, bases de données et réseaux à travers des projets pratiques orientés entreprise.',
     icon: React.createElement(LuGraduationCap),
     date: '2025 - en cours',
   },
