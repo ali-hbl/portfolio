@@ -28,14 +28,16 @@ export default function Contact() {
         once: true,
       }}
     >
-      <SectionHeading>Contact me</SectionHeading>
+      <SectionHeading>
+        <span className="normal-case">Contactez-moi</span>
+      </SectionHeading>
 
       <p className="-mt-6 text-gray-700 dark:text-white/80">
-        Please contact me directly at{' '}
+        Vous avez un projet ou une idée à concrétiser? Écrivez-moi directement à{' '}
         <a className="underline" href="mailto:contact@aely.dev">
           contact@aely.dev
         </a>{' '}
-        or through this form.
+        ou utilisez ce formulaire.
       </p>
 
       <form
@@ -48,24 +50,25 @@ export default function Contact() {
             return;
           }
 
-          toast.success('Email sent successfully!');
+          toast.success('Message envoyé avec succès!');
         }}
       >
         <input
           className="borderBlack h-14 rounded-lg px-4 transition-all dark:bg-white dark:bg-opacity-80 dark:outline-none dark:focus:bg-opacity-100"
           type="email"
           name="email"
-          placeholder="Your email"
+          placeholder="Votre e-mail"
           maxLength={200}
           required
         />
         <textarea
           className="borderBlack my-3 h-52 rounded-lg p-4 transition-all dark:bg-white dark:bg-opacity-80 dark:outline-none dark:focus:bg-opacity-100"
           name="message"
-          placeholder="Your message"
+          placeholder="Votre message"
           maxLength={5000}
           required
         />
+        <input type="text" name="company" className="hidden" tabIndex={-1} autoComplete="off" />
         <SubmitBtn />
       </form>
     </motion.section>
