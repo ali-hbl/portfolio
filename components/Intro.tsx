@@ -6,8 +6,7 @@ import pp from '@/public/pp.jpeg';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
-import { FaGithubSquare } from 'react-icons/fa';
+import { BsArrowRight } from 'react-icons/bs';
 
 export default function Intro() {
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
@@ -73,13 +72,25 @@ export default function Intro() {
           Me contacter <BsArrowRight className="opacity-70 transition group-hover:translate-x-1" />
         </Link>
 
+        {/* Bouton secondaire : réalisations */}
+        <Link
+          href="#projects"
+          className="group flex items-center gap-2 rounded-full bg-white px-7 py-3 text-gray-700 outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:border-white/20 dark:bg-white/10 dark:text-white/80"
+          onClick={() => {
+            setActiveSection('Créations');
+            setTimeOfLastClick(Date.now());
+          }}
+        >
+          Mes réalisations
+        </Link>
+
         {/* <a
           className="group flex cursor-pointer items-center gap-2 rounded-full border-black bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-white/10"
           href="/public/CV.pdf"
           download
         >
           Download CV <HiDownload className="opacity-60 transition group-hover:translate-y-1" />
-        </a> */}
+        </a> 
 
         <a
           className="flex cursor-pointer items-center gap-2 rounded-full border-black bg-white p-4 py-3 text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/70"
@@ -95,7 +106,7 @@ export default function Intro() {
           target="_blank"
         >
           <FaGithubSquare />
-        </a>
+        </a> */}
       </motion.div>
     </section>
   );
