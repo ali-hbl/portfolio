@@ -10,7 +10,7 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Ali | Développeur freelance — Création de sites web modernes',
+  title: 'Ali | Développeur freelance',
   description:
     'Conception de sites vitrines, boutiques en ligne et applications web modernes. Développeur freelance spécialisé en sites performants et bien référencés.',
   icons: {
