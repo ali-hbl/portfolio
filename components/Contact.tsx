@@ -1,9 +1,9 @@
 'use client';
 
-import { useRef } from 'react';
 import { sendEmail } from '@/actions/sendEmail';
 import { useSectionInView } from '@/hooks/useSectionInView';
 import { motion } from 'framer-motion';
+import { useRef } from 'react';
 import toast from 'react-hot-toast';
 import SectionHeading from './SectionHeading';
 import SubmitBtn from './SubmitBtn';
@@ -54,6 +54,7 @@ export default function Contact() {
           }
 
           toast.success('Message envoyé avec succès!');
+
           setTimeout(() => {
             formRef.current?.reset();
           }, 2000);
