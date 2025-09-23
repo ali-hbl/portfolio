@@ -54,7 +54,6 @@ export default function Contact() {
           }
 
           toast.success('Message envoyé avec succès!');
-
           setTimeout(() => {
             formRef.current?.reset();
           }, 2000);
