@@ -1,5 +1,6 @@
 import React from 'react';
 
+import thirdFadeImg from '@/public/3rd-Fade.png';
 import carhubImg from '@/public/carhub.png';
 import marvelImg from '@/public/marvel.png';
 import zaytoonImg from '@/public/zaytoon.png';
@@ -173,12 +174,12 @@ export const projectsData = [
     link: 'https://restaurant-zaytoon.vercel.app',
   },
   {
-    title: '🦸 Marvel Quiz',
+    title: '🎬 3rd Fade',
     description:
-      'Un quiz interactif sur l’univers Marvel. Il permet aux fans de tester leurs connaissances, de progresser par niveaux et de sauvegarder leur score. Un bon exemple d’application ludique avec système de connexion sécurisé.',
-    tags: ['React', 'CSS3', 'Redux', 'Firebase'],
-    imageUrl: marvelImg,
-    link: 'https://marvel-quiz-d7f65.firebaseapp.com',
+      'Un site moderne pensé pour un vidéaste professionnel : présentation claire de ses réalisations, mise en avant de son portfolio vidéo et un formulaire de contact intégré pour faciliter les demandes de projets.',
+    tags: ['Next.js', 'TypeScript', 'Tailwind'],
+    imageUrl: thirdFadeImg,
+    link: 'https://www.3rdfade.com',
   },
   {
     title: '🚗 CarHub',
@@ -187,6 +188,14 @@ export const projectsData = [
     tags: ['Next.js', 'TypeScript', 'Tailwind'],
     imageUrl: carhubImg,
     link: 'https://carhubpro.vercel.app',
+  },
+  {
+    title: '🦸 Marvel Quiz',
+    description:
+      'Un quiz interactif sur l’univers Marvel. Il permet aux fans de tester leurs connaissances, de progresser par niveaux et de sauvegarder leur score. Un bon exemple d’application ludique avec système de connexion sécurisé.',
+    tags: ['React', 'CSS3', 'Redux', 'Firebase'],
+    imageUrl: marvelImg,
+    link: 'https://marvel-quiz-d7f65.firebaseapp.com',
   },
 ] as const;
 
