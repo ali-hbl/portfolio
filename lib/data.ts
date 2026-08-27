@@ -3,6 +3,7 @@ import React from 'react';
 import thirdFadeImg from '@/public/3rd-Fade.png';
 import carhubImg from '@/public/carhub.png';
 import marvelImg from '@/public/marvel.png';
+import seikoImg from '@/public/seiko.png';
 import zaytoonImg from '@/public/zaytoon.png';
 
 import { LuGraduationCap } from 'react-icons/lu';
@@ -180,6 +181,14 @@ export const projectsData = [
     tags: ['Next.js', 'TypeScript', 'Tailwind'],
     imageUrl: thirdFadeImg,
     link: 'https://www.3rdfade.com',
+  },
+  {
+    title: 'Agent IA : Moniteur de stock Seiko',
+    description:
+      "Un agent IA autonome qui vérifie la disponibilité et le prix d'une montre via Serper, avec notifications Telegram. Automatisé via GitHub Actions.",
+    tags: ['Python', 'crewAI', 'GitHub Actions'],
+    imageUrl: seikoImg,
+    link: 'https://palm-steel-8a7.notion.site/Agent-IA-2e10f45d211080d98fb0c3e64967ca3e',
   },
   {
     title: '🚗 CarHub',
