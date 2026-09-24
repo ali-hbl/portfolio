@@ -46,7 +46,7 @@ export default function Intro() {
       </motion.div>
 
       <motion.h1
-        className="mt-8 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl"
+        className="mt-8 font-mono text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl"
         {...fadeUp(0.1)}
       >
         Ali
