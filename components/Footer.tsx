@@ -1,45 +1,29 @@
-// export default function Footer() {
-//   return (
-//     <footer className="mb-10 px-4 text-center text-gray-500">
-//       <small className="mb-2 block text-xs">© {new Date().getFullYear()} Ali H. — Tous droits réservés.</small>
-//       <p className="text-xs">Créé avec passion et soin, en utilisant les meilleures technologies web modernes.</p>
-//       <p className="mt-1 text-xs">
-//         <a href="#contact" className="text-blue-800 hover:underline dark:text-blue-400">
-//           Me contacter
-//         </a>
-//       </p>
-//     </footer>
-//   );
-// }
+const links = [
+  { label: 'Email', href: 'mailto:contact@aely.dev', external: false },
+  { label: 'GitHub', href: 'https://github.com/ali-hbl', external: true },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/ali-haboula', external: true },
+  { label: 'Instagram', href: 'https://www.instagram.com/ally.guitar', external: true },
+];
 
 export default function Footer() {
   return (
-    <footer className="mb-10 px-4 text-center text-gray-500">
-      <p className="mb-2 block text-xs">Copyright © {new Date().getFullYear()} Ali — Tous droits réservés.</p>
+    <footer className="mb-10 px-4 text-center">
+      <div className="mx-auto mb-6 h-px w-24 bg-gradient-to-r from-transparent via-gray-400/50 to-transparent" />
 
-      <p className="text-xs">Créé avec passion et soin, en utilisant les meilleures technologies web modernes.</p>
+      <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-gray-500 dark:text-white/50">
+        {links.map(({ label, href, external }) => (
+          <a
+            key={label}
+            href={href}
+            {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+            className="transition hover:text-gray-900 dark:hover:text-white"
+          >
+            {label}
+          </a>
+        ))}
+      </nav>
 
-      <div className="mt-2 flex justify-center gap-4 text-sm">
-        <a href="mailto:contact@aely.dev" className="hover:text-blue-600 hover:underline dark:hover:text-blue-400">
-          Email
-        </a>
-        <a
-          href="https://www.linkedin.com/in/ali-haboula"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-blue-600 hover:underline dark:hover:text-blue-400"
-        >
-          LinkedIn
-        </a>
-        <a
-          href="https://www.instagram.com/ally.guitar"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-blue-600 hover:underline dark:hover:text-blue-400"
-        >
-          Instagram
-        </a>
-      </div>
+      <p className="mt-4 text-xs text-gray-400 dark:text-white/40">© {new Date().getFullYear()} Ali</p>
     </footer>
   );
 }

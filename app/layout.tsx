@@ -10,9 +10,8 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Ali | Développeur freelance',
-  description:
-    'Conception de sites vitrines, boutiques en ligne et applications web modernes. Développeur freelance spécialisé en sites performants et bien référencés.',
+  title: 'Ali | Full-stack Developer',
+  description: "Portfolio d'Ali, développeur full-stack. Projets, expérience et contact.",
   icons: {
     icon: '/favicon.ico',
   },

@@ -1,12 +1,9 @@
 import React from 'react';
 
 import thirdFadeImg from '@/public/3rd-Fade.png';
-import carhubImg from '@/public/carhub.png';
-import marvelImg from '@/public/marvel.png';
 import seikoImg from '@/public/seiko.png';
 import zaytoonImg from '@/public/zaytoon.png';
 
-import { LuGraduationCap } from 'react-icons/lu';
 import BelfiusLogo from '../public/BelfiusLogo.svg';
 import CIMB_Logo from '../public/CIMB_Logo.svg';
 import staizenLogo from '../public/staizenLogo.svg';
@@ -14,7 +11,7 @@ import staizenLogo from '../public/staizenLogo.svg';
 // import { FaReact } from 'react-icons/fa';
 // import { SiAngular } from 'react-icons/si';
 
-import { FaJava, FaLaptopCode } from 'react-icons/fa';
+import { FaJava } from 'react-icons/fa';
 import {
   SiAdobexd,
   SiAngular,
@@ -69,71 +66,68 @@ export const links = [
 
 // export const experiencesData = [
 //   {
-//     title: 'Graduated Front-end Engineer',
-//     location: 'Brussels, Belgium',
+//     title: 'Formation et premières réalisations',
+//     location: 'Bruxelles, Belgique',
 //     description:
-//       'I graduated after 3 years of study, including 2 years on a work-study basis. Following this work-study program, I immediately found a job as a software engineer.',
-//     icon: React.createElement(LuGraduationCap),
+//       'Lors de mon alternance, j’ai développé mes premiers sites et applications pour des clients, en proposant des solutions modernes et performantes.',
+//     icon: React.createElement(FaLaptopCode),
 //     date: '2020 - 2023',
 //   },
 //   {
-//     title: 'Front-end Engineer (CGS-CIMB Bank - CFD)',
-//     location: 'Brussels, Belgium',
+//     title: 'CIMB Bank',
+//     location: 'Bruxelles, Belgique',
 //     description:
-//       'I worked as a front-end developer for 1 year at this bank. I designed and built components for the portal and developed unit tests to ensure functionality using React, TypeScript, and Jest.',
+//       'Création d’interfaces sur mesure pour le portail en ligne de la banque, offrant une expérience fluide, un accès rapide aux services et une image de marque renforcée.',
 //     icon: React.createElement(CIMB_Logo),
 //     date: '2021 - 2022',
 //   },
 //   {
-//     title: 'Front-end Engineer/Webmaster (Belfius)',
-//     location: 'Brussels, Belgium',
+//     title: 'Belfius',
+//     location: 'Bruxelles, Belgique',
 //     description:
-//       "I worked as both a front-end developer and webmaster at Belfius, one of Belgium's largest banks. I utilized various tools, including Angular, Dexie.js, SDL Tridion CMS, Figma, and Photoshop, to develop programs and create pages for the bank.",
+//       'Refonte et optimisation de pages web pour Belfius, l’une des plus grandes banques belges, afin d’améliorer la performance et l’image en ligne de la marque.',
 //     icon: React.createElement(BelfiusLogo),
-//     // icon: React.createElement(BelfiusLogoWhite),
 //     date: '2022 - 2023',
 //   },
-//   ,
 //   {
-//     title: 'Front-end Engineer (CGS-CIMB Bank - ProsperUs)',
-//     location: 'Brussels, Belgium',
+//     title: 'CIMB Bank',
+//     location: 'Bruxelles, Belgique',
 //     description:
-//       'I led feature development, ensured app performance, resolved conflicts, updated server versions, and managed the mobile app for a seamless user experience using React, TypeScript, and Android Studio.',
+//       'Développement de nouvelles fonctionnalités et optimisation des performances de l’application mobile bancaire pour offrir une expérience plus fluide et fiable.',
 //     icon: React.createElement(CIMB_Logo),
 //     date: '2023 - 2024',
 //   },
 //   {
-//     title: 'Front-end Engineer (Gembaa - Staizen internal project)',
-//     location: 'Brussels, Belgium',
+//     title: 'Staizen',
+//     location: 'Bruxelles, Belgique',
 //     description:
-//       'I designed and built components for this internal tool whose purpose is to be sold to potential customers.',
+//       "Développement de l'application « Gembaa », plateforme innovante de planification d’entreprise, afin de faciliter la collaboration entre équipes.",
 //     icon: React.createElement(staizenLogo, { style: { borderRadius: '5px' } }),
 //     date: '2023 - 2024',
+//   },
+//   {
+//     title: 'Bachelier en informatique de gestion',
+//     location: 'Bruxelles, Belgique',
+//     description:
+//       'Renforcement des compétences en développement, bases de données et réseaux à travers des projets pratiques orientés entreprise.',
+//     icon: React.createElement(LuGraduationCap),
+//     date: '2025 - en cours',
 //   },
 // ] as const;
 
 export const experiencesData = [
   {
-    title: 'Formation et premières réalisations',
+    title: 'Staizen',
     location: 'Bruxelles, Belgique',
     description:
-      'Lors de mon alternance, j’ai développé mes premiers sites et applications pour des clients, en proposant des solutions modernes et performantes.',
-    icon: React.createElement(FaLaptopCode),
-    date: '2020 - 2023',
-  },
-  {
-    title: 'CIMB Bank',
-    location: 'Bruxelles, Belgique',
-    description:
-      'Création d’interfaces sur mesure pour le portail en ligne de la banque, offrant une expérience fluide, un accès rapide aux services et une image de marque renforcée.',
-    icon: React.createElement(CIMB_Logo),
-    date: '2021 - 2022',
+      "Développeur frontend (React, Angular), d'abord en alternance puis en CDI. Développement de Gembaa, une plateforme de planification d'entreprise, et missions chez des clients bancaires.",
+    icon: React.createElement(staizenLogo, { style: { borderRadius: '5px' } }),
+    date: '2021 - 2024',
   },
   {
     title: 'Belfius',
     location: 'Bruxelles, Belgique',
-    description:
-      'Refonte et optimisation de pages web pour Belfius, l’une des plus grandes banques belges, afin d’améliorer la performance et l’image en ligne de la marque.',
+    description: 'Refonte de pages web du site de la banque, avec un travail sur la performance.',
     icon: React.createElement(BelfiusLogo),
     date: '2022 - 2023',
   },
@@ -141,25 +135,9 @@ export const experiencesData = [
     title: 'CIMB Bank',
     location: 'Bruxelles, Belgique',
     description:
-      'Développement de nouvelles fonctionnalités et optimisation des performances de l’application mobile bancaire pour offrir une expérience plus fluide et fiable.',
+      "Interfaces du portail en ligne (2021-2022), puis nouvelles fonctionnalités et optimisation de l'application mobile (2023-2024).",
     icon: React.createElement(CIMB_Logo),
-    date: '2023 - 2024',
-  },
-  {
-    title: 'Staizen',
-    location: 'Bruxelles, Belgique',
-    description:
-      "Développement de l'application « Gembaa », plateforme innovante de planification d’entreprise, afin de faciliter la collaboration entre équipes.",
-    icon: React.createElement(staizenLogo, { style: { borderRadius: '5px' } }),
-    date: '2023 - 2024',
-  },
-  {
-    title: 'Bachelier en informatique de gestion',
-    location: 'Bruxelles, Belgique',
-    description:
-      'Renforcement des compétences en développement, bases de données et réseaux à travers des projets pratiques orientés entreprise.',
-    icon: React.createElement(LuGraduationCap),
-    date: '2025 - en cours',
+    date: '2021 - 2024',
   },
 ] as const;
 
@@ -167,45 +145,45 @@ export type LinkType = string | (() => void);
 
 export const projectsData = [
   {
-    title: '🥘 Restaurant Zaytoon',
+    title: 'Restaurant Zaytoon',
     description:
-      'Une application conçue pour les restaurants : commandes en ligne, réservations de table, paiements, emails personnalisés, et un espace privé pour les gérants. Idéal pour améliorer l’expérience client et simplifier la gestion au quotidien.',
-    tags: ['React', 'Node.js', 'Sass', 'Express', 'MySQL'],
+      'Application de restauration complète : commande en ligne, réservation de tables, paiements, e-mails transactionnels et espace gérant. Conçue et développée seul, du front au back.',
+    tags: ['React', 'Node.js', 'Express', 'MySQL', 'Sass'],
     imageUrl: zaytoonImg,
     link: 'https://restaurant-zaytoon.vercel.app',
   },
   {
-    title: '🎬 3rd Fade',
+    title: '3rd Fade',
     description:
-      'Un site moderne pensé pour un vidéaste professionnel : présentation claire de ses réalisations, mise en avant de son portfolio vidéo et un formulaire de contact intégré pour faciliter les demandes de projets.',
+      "Site vitrine pour un vidéaste professionnel : portfolio vidéo et formulaire de contact. Livré à un client réel, développé avec l'aide de l'IA.",
     tags: ['Next.js', 'TypeScript', 'Tailwind'],
     imageUrl: thirdFadeImg,
     link: 'https://www.3rdfade.com',
   },
   {
-    title: 'Agent IA : Moniteur de stock Seiko',
+    title: 'Moniteur de stock Seiko',
     description:
-      "Un agent IA autonome qui vérifie la disponibilité et le prix d'une montre via Serper, avec notifications Telegram. Automatisé via GitHub Actions.",
+      "Agent IA autonome qui surveille le prix et la disponibilité d'une montre et m'alerte sur Telegram. Projet d'apprentissage pour maîtriser la création d'agents.",
     tags: ['Python', 'crewAI', 'GitHub Actions'],
     imageUrl: seikoImg,
     link: 'https://palm-steel-8a7.notion.site/Agent-IA-2e10f45d211080d98fb0c3e64967ca3e',
   },
-  {
-    title: '🚗 CarHub',
-    description:
-      'Une plateforme simple et rapide pour rechercher des véhicules par marque, modèle, année ou type de carburant. Parfait pour les garages ou vendeurs automobiles souhaitant moderniser leur catalogue.',
-    tags: ['Next.js', 'TypeScript', 'Tailwind'],
-    imageUrl: carhubImg,
-    link: 'https://carhubpro.vercel.app',
-  },
-  {
-    title: '🦸 Marvel Quiz',
-    description:
-      'Un quiz interactif sur l’univers Marvel. Il permet aux fans de tester leurs connaissances, de progresser par niveaux et de sauvegarder leur score. Un bon exemple d’application ludique avec système de connexion sécurisé.',
-    tags: ['React', 'CSS3', 'Redux', 'Firebase'],
-    imageUrl: marvelImg,
-    link: 'https://marvel-quiz-d7f65.firebaseapp.com',
-  },
+  // {
+  //   title: 'CarHub',
+  //   description:
+  //     'Une plateforme simple et rapide pour rechercher des véhicules par marque, modèle, année ou type de carburant. Parfait pour les garages ou vendeurs automobiles souhaitant moderniser leur catalogue.',
+  //   tags: ['Next.js', 'TypeScript', 'Tailwind'],
+  //   imageUrl: carhubImg,
+  //   link: 'https://carhubpro.vercel.app',
+  // },
+  // {
+  //   title: '🦸 Marvel Quiz',
+  //   description:
+  //     'Un quiz interactif sur l’univers Marvel. Il permet aux fans de tester leurs connaissances, de progresser par niveaux et de sauvegarder leur score. Un bon exemple d’application ludique avec système de connexion sécurisé.',
+  //   tags: ['React', 'CSS3', 'Redux', 'Firebase'],
+  //   imageUrl: marvelImg,
+  //   link: 'https://marvel-quiz-d7f65.firebaseapp.com',
+  // },
 ] as const;
 
 export const skillsByCategory = [
