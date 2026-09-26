@@ -2,7 +2,7 @@ const links = [
   { label: 'Email', href: 'mailto:contact@aely.dev', external: false },
   { label: 'GitHub', href: 'https://github.com/ali-hbl', external: true },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/ali-haboula', external: true },
-  { label: 'Instagram', href: 'https://www.instagram.com/ally.guitar', external: true },
+  { label: 'Instagram', href: 'https://www.instagram.com/aely.gtr/', external: true },
 ];
 
 export default function Footer() {
