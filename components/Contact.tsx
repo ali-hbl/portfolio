@@ -35,11 +35,12 @@ export default function Contact() {
       </SectionHeading>
 
       <p className="-mt-6 text-gray-700 dark:text-white/80">
-        Vous avez un projet ou une idée à concrétiser? Écrivez-moi directement à{' '}
+        Une question, une opportunité de stage, ou juste envie d’échanger ?{' '}
+        <span className="whitespace-nowrap">Écrivez-moi</span> à{' '}
         <a className="underline" href="mailto:contact@aely.dev">
           contact@aely.dev
         </a>{' '}
-        ou utilisez ce formulaire.
+        ou passez par ce formulaire.
       </p>
 
       <form

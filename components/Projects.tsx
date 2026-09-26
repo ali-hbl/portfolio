@@ -1,22 +1,22 @@
 'use client';
 
-import React from 'react';
-import { projectsData } from '@/lib/data';
 import { useSectionInView } from '@/hooks/useSectionInView';
-import SectionHeading from './SectionHeading';
+import { projectsData } from '@/lib/data';
 import Project from './Project';
+import SectionHeading from './SectionHeading';
 
 export default function Projects() {
-  const { ref } = useSectionInView('Créations', 0.5);
+  const { ref } = useSectionInView('Créations', 0.1);
 
   return (
-    <section id="projects" ref={ref} className="mb-28 scroll-mt-28">
-      <SectionHeading><span className="normal-case">Ce que je peux créer pour vous</span></SectionHeading>
+    <section id="projects" ref={ref} className="mb-28 w-full max-w-[42rem] scroll-mt-28 px-4">
+      <SectionHeading>
+        <span className="normal-case">Projets qui tournent en ce moment</span>
+      </SectionHeading>
+
       <div>
         {projectsData.map((project) => (
-          <React.Fragment key={project.title}>
-            <Project {...project} />
-          </React.Fragment>
+          <Project key={project.title} {...project} />
         ))}
       </div>
     </section>

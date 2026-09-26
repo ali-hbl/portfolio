@@ -2,6 +2,7 @@
 
 import { useActiveSectionContext } from '@/context/ActiveSectionContext';
 import { useSectionInView } from '@/hooks/useSectionInView';
+import { useTypewriter } from '@/hooks/useTypewriter';
 import pp from '@/public/pp.jpeg';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -18,9 +19,33 @@ const fadeUp = (delay = 0) => ({
 const ghost =
   'inline-flex items-center justify-center gap-2 rounded-full border border-black/10 bg-white/70 text-base font-medium text-gray-800 backdrop-blur outline-none transition hover:-translate-y-0.5 hover:bg-white focus-visible:ring-2 focus-visible:ring-gray-900/40 dark:border-white/10 dark:bg-white/10 dark:text-white/90 dark:hover:bg-white/20 dark:focus-visible:ring-white/60';
 
+// La phrase, découpée en segments colorés — comme un mot-clé surligné dans un éditeur de code.
+const taglineSegments = [
+  { text: 'Pas juste des interfaces ', className: 'text-gray-500 dark:text-white/50' },
+  { text: '— ', className: 'text-gray-400 dark:text-white/30' },
+  { text: 'des produits', className: 'text-sky-600 dark:text-sky-400' },
+  { text: ', du client jusqu’au serveur.', className: 'text-gray-600 dark:text-white/70' },
+] as const;
+
+const taglinePlain = taglineSegments.map((s) => s.text).join('');
+const taglineLength = taglinePlain.length;
+
 export default function Intro() {
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   const { ref } = useSectionInView('Accueil', 0.6);
+  const { count, isDone } = useTypewriter(taglineLength, 24, 900);
+
+  let remaining = count;
+
+  const renderedSegments = taglineSegments.map((seg, i) => {
+    const visible = seg.text.slice(0, Math.max(0, Math.min(seg.text.length, remaining)));
+    remaining -= seg.text.length;
+    return visible ? (
+      <span key={i} className={seg.className}>
+        {visible}
+      </span>
+    ) : null;
+  });
 
   return (
     <section id="home" ref={ref} className="mb-28 max-w-[50rem] scroll-mt-[100rem] text-center sm:mb-0">
@@ -57,17 +82,25 @@ export default function Intro() {
       </motion.p>
 
       <motion.p
-        className="mx-auto mt-6 max-w-xl px-4 text-base leading-relaxed text-gray-600 dark:text-white/70 sm:text-lg"
-        {...fadeUp(0.2)}
+        className="mx-auto mt-6 min-h-[3.5rem] max-w-xl px-4 font-mono text-sm leading-relaxed sm:min-h-[2rem] sm:text-base"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.3, delay: 0.15 }}
       >
-        Je conçois des applications web avec{' '}
-        <span className="font-medium text-gray-900 dark:text-white">React, Next.js et Node.js</span>. J’ai passé près de
-        trois ans à développer des interfaces pour des banques avant de construire mes propres produits de bout en bout.
+        <span className="sr-only">{taglinePlain}</span>
+        <span aria-hidden="true">
+          {renderedSegments}
+          <span
+            className={`ml-0.5 inline-block h-4 w-[2px] translate-y-[3px] bg-emerald-500 align-middle dark:bg-emerald-400 ${
+              isDone ? 'animate-pulse' : ''
+            }`}
+          />
+        </span>
       </motion.p>
 
       <motion.div className="mt-8 flex justify-center px-4" {...fadeUp(0.4)}>
-        <p className="inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-4 py-1.5 text-sm font-medium text-emerald-700 dark:text-emerald-300">
-          <span className="relative flex h-2 w-2">
+        <p className="inline-flex items-start gap-2 rounded-2xl border border-emerald-500/20 bg-emerald-500/10 px-4 py-2 text-sm font-medium text-emerald-700 dark:text-emerald-300 sm:items-center sm:rounded-full sm:py-1.5">
+          <span className="relative mt-1.5 flex h-2 w-2 shrink-0 sm:mt-0">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
           </span>
@@ -100,13 +133,12 @@ export default function Intro() {
         </Link>
 
         <Link
-          className={`${ghost} px-6 py-3`}
+          className={`${ghost} h-12 w-12 text-xl`}
           href="https://github.com/ali-hbl"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FaGithub className="text-xl" />
-          GitHub
         </Link>
 
         <Link

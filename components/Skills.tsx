@@ -1,21 +1,16 @@
 'use client';
 
 import { useSectionInView } from '@/hooks/useSectionInView';
-import { skillsByCategory } from '@/lib/data';
+import { skillsByTier } from '@/lib/data';
 import { motion } from 'framer-motion';
 import SectionHeading from './SectionHeading';
 
 const fadeInAnimationVariants = {
-  initial: {
-    opacity: 0,
-    y: 100,
-  },
+  initial: { opacity: 0, y: 40 },
   animate: (index: number) => ({
     opacity: 1,
     y: 0,
-    transition: {
-      delay: 0.1 * index, // allow the li's to be displayed one after the other, each one get a larger delay due to the index
-    },
+    transition: { delay: 0.05 * index },
   }),
 };
 
@@ -23,75 +18,65 @@ export default function Skills() {
   const { ref } = useSectionInView('Compétences');
 
   return (
-    <section id="skills" ref={ref} className="mb-28 max-w-[60rem] scroll-mt-28 text-center sm:mb-40">
+    <section id="skills" ref={ref} className="mb-28 max-w-[45rem] scroll-mt-28 text-center sm:mb-40">
       <SectionHeading>
-        <span className="normal-case">Outils et technologies que j’utilise pour créer vos projets</span>
+        <span className="normal-case">Stack technique</span>
       </SectionHeading>
 
-      <p className="mx-auto mb-8 max-w-[42rem] text-base text-gray-600 dark:text-white/70">
-        Voici les outils que j’emploie au quotidien pour livrer des sites
-        <span className="font-medium"> rapides</span>, <span className="font-medium">fiables</span> et{' '}
-        <span className="font-medium">faciles à gérer</span>.
-      </p>
+      {skillsByTier.map((group) => (
+        <div key={group.tier} className="mb-8 last:mb-0">
+          <h3 className="mb-4 flex items-center justify-center gap-2 font-mono text-sm">
+            <span
+              className={group.tier === 'core' ? 'text-sky-500 dark:text-sky-400' : 'text-gray-400 dark:text-white/30'}
+            >
+              {'//'}
+            </span>
+            <span
+              className={
+                group.tier === 'core'
+                  ? 'font-semibold uppercase tracking-wide text-gray-700 dark:text-white/80'
+                  : 'font-medium uppercase tracking-wide text-gray-500 dark:text-white/50'
+              }
+            >
+              {group.title}
+            </span>
+          </h3>
 
-      <div className="grid gap-6 sm:grid-cols-2">
-        {skillsByCategory.map((cat, i) => (
-          <div
-            key={cat.title}
-            className="rounded-2xl border border-black/10 bg-white/70 p-5 text-left shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/5"
-          >
-            <h3 className="mb-1 text-lg font-semibold">{cat.title}</h3>
-            <p className="mb-4 text-sm text-gray-600 dark:text-white/60">{cat.benefit}</p>
+          <ul className="flex flex-wrap justify-center gap-2.5">
+            {group.items.map((item, index) => {
+              const Icon = item.icon;
+              const isCore = group.tier === 'core';
 
-            <ul className="flex flex-wrap gap-2">
-              {cat.items.map((item, index) => {
-                const Icon = item.icon;
-
-                return (
-                  <motion.li
-                    key={item.label}
-                    className="inline-flex items-center gap-2 rounded-xl border border-black/10 bg-white px-3 py-2 text-sm text-gray-800 
-  transition-transform duration-200 hover:bg-gray-50 dark:border-white/10 dark:bg-white/10 dark:text-white/80 dark:hover:bg-white/20"
-                    variants={fadeInAnimationVariants}
-                    initial="initial"
-                    whileInView="animate"
-                    viewport={{ once: true }}
-                    custom={index}
-                  >
-                    {Icon ? <Icon className="text-base opacity-80" /> : null}
-                    {item.label}
-                  </motion.li>
-                );
-              })}
-            </ul>
-          </div>
-        ))}
-      </div>
+              return (
+                <motion.li
+                  key={item.label}
+                  className={
+                    isCore
+                      ? 'inline-flex items-center gap-2 rounded-xl border border-black/10 bg-white px-4 py-2.5 text-sm font-medium text-gray-800 shadow-sm transition hover:-translate-y-0.5 hover:border-sky-400/40 hover:shadow dark:border-white/10 dark:bg-white/10 dark:text-white/90 dark:hover:border-sky-400/30'
+                      : 'inline-flex items-center gap-2 rounded-xl border border-black/10 bg-white/40 px-3.5 py-2 text-sm text-gray-700 transition hover:-translate-y-0.5 hover:bg-white/70 dark:border-white/10 dark:bg-white/[0.06] dark:text-white/70 dark:hover:bg-white/10'
+                  }
+                  variants={fadeInAnimationVariants}
+                  initial="initial"
+                  whileInView="animate"
+                  viewport={{ once: true }}
+                  custom={index}
+                >
+                  {Icon ? (
+                    <Icon
+                      className={
+                        isCore
+                          ? 'text-base text-sky-600 dark:text-sky-400'
+                          : 'text-sm text-gray-400 opacity-70 dark:text-white/40'
+                      }
+                    />
+                  ) : null}
+                  {item.label}
+                </motion.li>
+              );
+            })}
+          </ul>
+        </div>
+      ))}
     </section>
   );
 }
-
-// export default function Skills() {
-//   const { ref } = useSectionInView('Compétences');
-
-//   return (
-//     <section id="skills" ref={ref} className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40">
-//       <SectionHeading><span className='normal-case'>Outils et technologies que j’utilise pour créer vos projets</span></SectionHeading>
-//       <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
-//         {skillsData.map((skill, index) => (
-//           <motion.li
-//             className="rounded-xl border border-black bg-white px-5 py-3 dark:bg-white/10 dark:text-white/80"
-//             key={index}
-//             variants={fadeInAnimationVariants}
-//             initial="initial"
-//             whileInView="animate"
-//             viewport={{ once: true }}
-//             custom={index}
-//           >
-//             {skill}
-//           </motion.li>
-//         ))}
-//       </ul>
-//     </section>
-//   );
-// }

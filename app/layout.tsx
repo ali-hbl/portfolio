@@ -10,7 +10,7 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Ali | Full-stack Developer',
+  title: 'Ali | Fullstack Developer',
   description: "Portfolio d'Ali, développeur full-stack. Projets, expérience et contact.",
   icons: {
     icon: '/favicon.ico',

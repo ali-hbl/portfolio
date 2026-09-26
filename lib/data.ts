@@ -1,17 +1,11 @@
-import React from 'react';
-
 import thirdFadeImg from '@/public/3rd-Fade.png';
 import seikoImg from '@/public/seiko.png';
 import zaytoonImg from '@/public/zaytoon.png';
-
-import BelfiusLogo from '../public/BelfiusLogo.svg';
-import CIMB_Logo from '../public/CIMB_Logo.svg';
-import staizenLogo from '../public/staizenLogo.svg';
-// import BelfiusLogoWhite from '../public/BelfiusLogoWhite.svg';
-// import { FaReact } from 'react-icons/fa';
-// import { SiAngular } from 'react-icons/si';
-
-import { FaJava } from 'react-icons/fa';
+import { BiLogoPostgresql, BiLogoTypescript } from 'react-icons/bi';
+import { DiMongodb } from 'react-icons/di';
+import { FaAngular, FaFigma, FaGitAlt, FaJava, FaNodeJs, FaPhp, FaReact, FaSass, FaStripe } from 'react-icons/fa';
+import { GrMysql } from 'react-icons/gr';
+import { IoLogoFirebase } from 'react-icons/io5';
 import {
   SiAdobexd,
   SiAngular,
@@ -36,6 +30,10 @@ import {
   SiTestinglibrary,
   SiTypescript,
 } from 'react-icons/si';
+import { TbBrandNextjs } from 'react-icons/tb';
+import BelfiusLogo from '../public/BelfiusLogo.svg';
+import CIMB_Logo from '../public/CIMB_Logo.svg';
+import staizenLogo from '../public/staizenLogo.svg';
 
 export const links = [
   {
@@ -64,80 +62,40 @@ export const links = [
   },
 ] as const;
 
-// export const experiencesData = [
-//   {
-//     title: 'Formation et premières réalisations',
-//     location: 'Bruxelles, Belgique',
-//     description:
-//       'Lors de mon alternance, j’ai développé mes premiers sites et applications pour des clients, en proposant des solutions modernes et performantes.',
-//     icon: React.createElement(FaLaptopCode),
-//     date: '2020 - 2023',
-//   },
-//   {
-//     title: 'CIMB Bank',
-//     location: 'Bruxelles, Belgique',
-//     description:
-//       'Création d’interfaces sur mesure pour le portail en ligne de la banque, offrant une expérience fluide, un accès rapide aux services et une image de marque renforcée.',
-//     icon: React.createElement(CIMB_Logo),
-//     date: '2021 - 2022',
-//   },
-//   {
-//     title: 'Belfius',
-//     location: 'Bruxelles, Belgique',
-//     description:
-//       'Refonte et optimisation de pages web pour Belfius, l’une des plus grandes banques belges, afin d’améliorer la performance et l’image en ligne de la marque.',
-//     icon: React.createElement(BelfiusLogo),
-//     date: '2022 - 2023',
-//   },
-//   {
-//     title: 'CIMB Bank',
-//     location: 'Bruxelles, Belgique',
-//     description:
-//       'Développement de nouvelles fonctionnalités et optimisation des performances de l’application mobile bancaire pour offrir une expérience plus fluide et fiable.',
-//     icon: React.createElement(CIMB_Logo),
-//     date: '2023 - 2024',
-//   },
-//   {
-//     title: 'Staizen',
-//     location: 'Bruxelles, Belgique',
-//     description:
-//       "Développement de l'application « Gembaa », plateforme innovante de planification d’entreprise, afin de faciliter la collaboration entre équipes.",
-//     icon: React.createElement(staizenLogo, { style: { borderRadius: '5px' } }),
-//     date: '2023 - 2024',
-//   },
-//   {
-//     title: 'Bachelier en informatique de gestion',
-//     location: 'Bruxelles, Belgique',
-//     description:
-//       'Renforcement des compétences en développement, bases de données et réseaux à travers des projets pratiques orientés entreprise.',
-//     icon: React.createElement(LuGraduationCap),
-//     date: '2025 - en cours',
-//   },
-// ] as const;
-
 export const experiencesData = [
   {
-    title: 'Staizen',
+    company: 'Staizen',
+    companyLink: 'https://www.staizen.com/',
     location: 'Bruxelles, Belgique',
-    description:
-      "Développeur frontend (React, Angular), d'abord en alternance puis en CDI. Développement de Gembaa, une plateforme de planification d'entreprise, et missions chez des clients bancaires.",
-    icon: React.createElement(staizenLogo, { style: { borderRadius: '5px' } }),
+    role: "Développeur frontend (React, Angular), d'abord en alternance puis en CDI.",
     date: '2021 - 2024',
-  },
-  {
-    title: 'Belfius',
-    location: 'Bruxelles, Belgique',
-    description: 'Refonte de pages web du site de la banque, avec un travail sur la performance.',
-    icon: React.createElement(BelfiusLogo),
-    date: '2022 - 2023',
-  },
-  {
-    title: 'CIMB Bank',
-    location: 'Bruxelles, Belgique',
-    description:
-      "Interfaces du portail en ligne (2021-2022), puis nouvelles fonctionnalités et optimisation de l'application mobile (2023-2024).",
-    icon: React.createElement(CIMB_Logo),
-    date: '2021 - 2024',
+    icon: staizenLogo,
+    items: [
+      {
+        type: 'mission' as const,
+        client: 'CIMB Bank',
+        clientLink: 'https://apps.apple.com/us/app/cgscimb-cfd/id1619308199',
+        date: '2021 - 2022',
+        description: 'Interfaces du portail en ligne.',
+        icon: CIMB_Logo,
+      },
+      {
+        type: 'mission' as const,
+        client: 'Belfius',
+        clientLink: 'https://www.belfius.be/site/retail/fr/produits/paiement/banque-en-ligne/belfius-direct-net',
+        date: '2022 - 2023',
+        description: 'Refonte de pages web, avec un travail sur la performance.',
+        icon: BelfiusLogo,
+      },
+      {
+        type: 'projet interne' as const,
+        client: 'Gembaa',
+        clientLink: 'https://www.gembaa.com/',
+        date: '2023 - 2024',
+        description: "Plateforme de planification d'entreprise — mon dernier projet chez Staizen.",
+        icon: staizenLogo,
+      },
+    ],
   },
 ] as const;
 
@@ -155,7 +113,7 @@ export const projectsData = [
   {
     title: '3rd Fade',
     description:
-      "Site vitrine pour un vidéaste professionnel : portfolio vidéo et formulaire de contact. Livré à un client réel, développé avec l'aide de l'IA.",
+      'Site vitrine pour un vidéaste professionnel : portfolio vidéo et formulaire de contact. Livré à un client réel.',
     tags: ['Next.js', 'TypeScript', 'Tailwind'],
     imageUrl: thirdFadeImg,
     link: 'https://www.3rdfade.com',
@@ -168,22 +126,6 @@ export const projectsData = [
     imageUrl: seikoImg,
     link: 'https://palm-steel-8a7.notion.site/Agent-IA-2e10f45d211080d98fb0c3e64967ca3e',
   },
-  // {
-  //   title: 'CarHub',
-  //   description:
-  //     'Une plateforme simple et rapide pour rechercher des véhicules par marque, modèle, année ou type de carburant. Parfait pour les garages ou vendeurs automobiles souhaitant moderniser leur catalogue.',
-  //   tags: ['Next.js', 'TypeScript', 'Tailwind'],
-  //   imageUrl: carhubImg,
-  //   link: 'https://carhubpro.vercel.app',
-  // },
-  // {
-  //   title: '🦸 Marvel Quiz',
-  //   description:
-  //     'Un quiz interactif sur l’univers Marvel. Il permet aux fans de tester leurs connaissances, de progresser par niveaux et de sauvegarder leur score. Un bon exemple d’application ludique avec système de connexion sécurisé.',
-  //   tags: ['React', 'CSS3', 'Redux', 'Firebase'],
-  //   imageUrl: marvelImg,
-  //   link: 'https://marvel-quiz-d7f65.firebaseapp.com',
-  // },
 ] as const;
 
 export const skillsByCategory = [
@@ -236,28 +178,37 @@ export const skillsByCategory = [
   },
 ] as const;
 
-// export const skillsData = [
-//   'HTML',
-//   'CSS',
-//   'JavaScript',
-//   'TypeScript',
-//   'React',
-//   'Angular',
-//   'Node.js',
-//   'Next.js',
-//   'PHP',
-//   'Git',
-//   'Tailwind',
-//   'Sass',
-//   'MongoDB',
-//   'MySQL',
-//   'Firebase',
-//   'Redux',
-//   'Express',
-//   'Framer Motion',
-//   'CMS',
-//   'Jest',
-//   'React Testing Library',
-//   'Figma',
-//   'Adobe XD',
-// ] as const;
+export const skillsByTier = [
+  {
+    tier: 'core' as const,
+    title: 'Au quotidien',
+    items: [
+      { label: 'React', icon: FaReact },
+      { label: 'Next.js', icon: TbBrandNextjs },
+      { label: 'TypeScript', icon: BiLogoTypescript },
+      { label: 'Node', icon: FaNodeJs },
+      { label: 'Tailwind', icon: SiTailwindcss },
+      { label: 'Angular', icon: FaAngular },
+      { label: 'MySQL', icon: GrMysql },
+      { label: 'Git', icon: FaGitAlt },
+      { label: 'Figma', icon: FaFigma },
+    ],
+  },
+  {
+    tier: 'also' as const,
+    title: 'Déjà utilisé',
+    items: [
+      { label: 'Sass', icon: FaSass },
+      { label: 'PHP', icon: FaPhp },
+      { label: 'Express', icon: SiExpress },
+      { label: 'Java', icon: FaJava },
+      { label: 'PostgreSQL', icon: BiLogoPostgresql },
+      { label: 'MongoDB', icon: DiMongodb },
+      { label: 'Firebase', icon: IoLogoFirebase },
+      { label: 'Stripe', icon: FaStripe },
+      { label: 'Jest', icon: SiJest },
+      { label: 'React Testing Library', icon: SiTestinglibrary },
+      // { label: 'Adobe XD', icon: SiAdobexd },
+    ],
+  },
+] as const;

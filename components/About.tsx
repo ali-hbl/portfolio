@@ -86,14 +86,26 @@ export default function About() {
             </div>
           </motion.div>
 
-          <motion.div variants={line}>
+          {/* <motion.div variants={line}>
             <Cmd>echo $STACK</Cmd>
             <p className="pl-5 text-emerald-300">React · Next.js · TypeScript · Node.js · Tailwind</p>
-          </motion.div>
+          </motion.div> */}
 
           <motion.div variants={line}>
             <Cmd>cat formation.md</Cmd>
-            <p className="pl-5">Bachelier en informatique à l’EPFC, orienté développement d’applications.</p>
+            <ul className="space-y-1.5 pl-5">
+              <li className="flex gap-2">
+                <span className="shrink-0 text-gray-500">·</span>
+                <span>Bachelier en informatique à l’EPFC, orienté développement d’applications.</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="shrink-0 text-gray-500">·</span>
+                <span>
+                  Certification de Développeur Web Front-End à l’EFP — obtenue avec grande distinction
+                  <span className="text-gray-500"> (93%)</span>.
+                </span>
+              </li>
+            </ul>
           </motion.div>
 
           <motion.div variants={line}>
