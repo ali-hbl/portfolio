@@ -11,7 +11,7 @@ export default function Projects() {
   return (
     <section id="projects" ref={ref} className="mb-28 w-full max-w-[42rem] scroll-mt-28 px-4">
       <SectionHeading>
-        <span className="normal-case">Projets qui tournent en ce moment</span>
+        <span className="normal-case">Construits, déployés, en ligne</span>
       </SectionHeading>
 
       <div>
