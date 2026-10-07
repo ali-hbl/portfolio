@@ -119,7 +119,7 @@ export default function About() {
               >
                 guitare/
               </a>
-              <span>gants-de-boxe/</span>
+              <span>tenue-de-sport/</span>
               <span>une-série-de-trop.mkv</span>
             </p>
           </motion.div>
