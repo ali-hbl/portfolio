@@ -105,6 +105,13 @@ export default function About() {
                   <span className="text-gray-500"> (93%)</span>.
                 </span>
               </li>
+              <li className="flex gap-2">
+                <span className="shrink-0 text-gray-500">·</span>
+                <span>
+                  Attestation de langue anglaise de niveau avancé à l'EPFC
+                  <span className="text-gray-500"> (B2)</span>.
+                </span>
+              </li>
             </ul>
           </motion.div>
 
