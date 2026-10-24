@@ -1,16 +1,4 @@
-import {
-  Body,
-  Button,
-  Container,
-  Head,
-  Heading,
-  Hr,
-  Html,
-  Preview,
-  Section,
-  Tailwind,
-  Text,
-} from '@react-email/components';
+import { Body, Button, Container, Head, Heading, Hr, Html, Preview, Section, Tailwind, Text } from 'react-email';
 
 type Props = {
   message: string;
@@ -23,9 +11,9 @@ export default function ContactFormEmail({ message, senderEmail }: Props) {
 
   return (
     <Html>
-      <Head />
       <Preview>Nouveau message depuis aely.dev</Preview>
       <Tailwind>
+        <Head />
         <Body className="m-0 bg-gray-100 p-0 text-black">
           <Container className="mx-auto my-10 w-full max-w-[600px]">
             <Section className="rounded-lg border border-black/10 bg-white px-8 py-6 shadow-sm">
