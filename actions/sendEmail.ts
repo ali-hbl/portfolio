@@ -3,6 +3,7 @@
 import ContactFormEmail from '@/email/ContactFormEmail';
 import { getErrorMessage } from '@/lib/utils';
 import React from 'react';
+import { render } from 'react-email';
 import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -36,20 +37,30 @@ export const sendEmail = async (formData: FormData): Promise<SendEmailResult> =>
     const subject = 'Nouveau message via le formulaire';
     const from = 'Portfolio aely.dev <noreply@aely.dev>'; // DOIT appartenir à un domaine vérifié dans Resend
 
+    const html = await render(
+      React.createElement(ContactFormEmail, {
+        message,
+        senderEmail,
+      }),
+    );
+
     const payload = {
       from,
       to: 'contact@aely.dev',
       subject,
-      replyTo: senderEmail, // v2+
-      react: React.createElement(ContactFormEmail, {
-        message,
-        senderEmail,
-      }),
+      replyTo: senderEmail,
+      html,
       text: `Message:\n${message}\n\nDe: ${senderEmail}`,
     };
 
-    const response = await resend.emails.send(payload);
-    return { data: response };
+    const { data, error } = await resend.emails.send(payload);
+
+    if (error) {
+      console.error('[sendEmail] Resend error:', error);
+      return { error: "Impossible d'envoyer le message." };
+    }
+
+    return { data };
   } catch (error: unknown) {
     console.error('[sendEmail] Resend error:', error);
     return { error: getErrorMessage(error) ?? 'Échec de l’envoi du message.' };
