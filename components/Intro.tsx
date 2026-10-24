@@ -98,16 +98,6 @@ export default function Intro() {
         </span>
       </motion.p>
 
-      <motion.div className="mt-8 flex justify-center px-4" {...fadeUp(0.4)}>
-        <p className="inline-flex items-start gap-2 rounded-2xl border border-emerald-500/20 bg-emerald-500/10 px-4 py-2 text-sm font-medium text-emerald-700 dark:text-emerald-300 sm:items-center sm:rounded-full sm:py-1.5">
-          <span className="relative mt-1.5 flex h-2 w-2 shrink-0 sm:mt-0">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
-          </span>
-          Disponible pour un stage à partir de février 2027
-        </p>
-      </motion.div>
-
       <motion.div className="mt-10 flex flex-col items-center justify-center gap-3 px-4 sm:flex-row" {...fadeUp(0.3)}>
         <Link
           href="#projects"
